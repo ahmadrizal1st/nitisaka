@@ -150,6 +150,9 @@ const ReferenceDetailPage = () => {
                 <img
                   src={reference.image}
                   alt={reference.title}
+                  onError={(e) => {
+                    e.currentTarget.src = "/placeholder.svg";
+                  }}
                   className="h-full w-full object-cover"
                 />
               </div>

@@ -14,9 +14,9 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
   const handleWhatsApp = () => {
     window.open(
       generateWhatsAppLink(
-        `Halo RijalsDev, saya tertarik dengan desain seperti "${reference.title}" (${reference.category}). Bisa konsultasi lebih lanjut?`
+        `Halo RijalsDev, saya tertarik dengan desain seperti "${reference.title}" (${reference.category}). Bisa konsultasi lebih lanjut?`,
       ),
-      "_blank"
+      "_blank",
     );
   };
 
@@ -27,10 +27,13 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
         <img
           src={reference.image}
           alt={reference.title}
+          onError={(e) => {
+            e.currentTarget.src = "/placeholder.svg";
+          }}
           className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-        
+
         {/* Overlay buttons */}
         <div className="absolute inset-0 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <Link to={`/reference/${reference.id}`}>
@@ -39,7 +42,11 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
               Detail
             </Button>
           </Link>
-          <Button size="sm" onClick={handleWhatsApp} className="bg-whatsapp hover:bg-whatsapp/90 shadow-lg">
+          <Button
+            size="sm"
+            onClick={handleWhatsApp}
+            className="bg-whatsapp hover:bg-whatsapp/90 shadow-lg"
+          >
             <MessageCircle className="mr-1 h-4 w-4" />
             Chat
           </Button>
@@ -50,8 +57,12 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
         <Badge variant="secondary" className="mb-2">
           {reference.category}
         </Badge>
-        <h3 className="font-semibold text-foreground line-clamp-1">{reference.title}</h3>
-        <p className="mt-1 text-sm text-muted-foreground line-clamp-2">{reference.description}</p>
+        <h3 className="font-semibold text-foreground line-clamp-1">
+          {reference.title}
+        </h3>
+        <p className="mt-1 text-sm text-muted-foreground line-clamp-2">
+          {reference.description}
+        </p>
       </CardContent>
 
       <CardFooter className="p-4 pt-0 flex gap-2">
@@ -61,7 +72,11 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
             Lihat Detail
           </Button>
         </Link>
-        <Button size="sm" onClick={handleWhatsApp} className="bg-whatsapp hover:bg-whatsapp/90">
+        <Button
+          size="sm"
+          onClick={handleWhatsApp}
+          className="bg-whatsapp hover:bg-whatsapp/90"
+        >
           <MessageCircle className="h-4 w-4" />
         </Button>
       </CardFooter>

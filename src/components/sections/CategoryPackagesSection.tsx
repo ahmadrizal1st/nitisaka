@@ -18,8 +18,8 @@ const categoryIcons: Record<string, React.ElementType> = {
   "umkm-bisnis": Store,
   "toko-online": ShoppingCart,
   "tour-travel": MapPin,
-  "seo-optimization": TrendingUp,
   "custom-system": Settings,
+  "seo-optimization": TrendingUp,
 };
 
 export const CategoryPackagesSection = () => {

@@ -27,76 +27,9 @@ export const references: Reference[] = [
       "Form konsultasi",
       "WhatsApp floating",
     ],
-    image: "/logo.png",
+    image: "",
     suggestedPackage: "Landing Page Business",
-    websiteHtml: `<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klinik Kecantikan Aurora</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; color: #333; }
-    .hero { background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%); padding: 60px 20px; text-align: center; }
-    .hero h1 { font-size: 2.5em; color: #880e4f; margin-bottom: 15px; }
-    .hero p { font-size: 1.2em; color: #666; margin-bottom: 25px; }
-    .btn { background: #e91e63; color: white; padding: 12px 30px; border: none; border-radius: 25px; font-size: 1em; cursor: pointer; }
-    .services { padding: 50px 20px; max-width: 1200px; margin: 0 auto; }
-    .services h2 { text-align: center; color: #880e4f; margin-bottom: 40px; }
-    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-    .service-card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center; }
-    .service-card h3 { color: #e91e63; margin: 15px 0 10px; }
-    .testimonials { background: #fce4ec; padding: 50px 20px; }
-    .testimonials h2 { text-align: center; color: #880e4f; margin-bottom: 40px; }
-    .testimonial { background: white; padding: 25px; border-radius: 10px; margin: 15px auto; max-width: 600px; }
-    .testimonial p { font-style: italic; color: #666; }
-    .testimonial .author { font-weight: bold; color: #e91e63; margin-top: 10px; }
-    footer { background: #880e4f; color: white; padding: 30px 20px; text-align: center; }
-  </style>
-</head>
-<body>
-  <header class="hero">
-    <h1>Klinik Kecantikan Aurora</h1>
-    <p>Wujudkan kulit impianmu bersama kami</p>
-    <button class="btn">Booking Sekarang</button>
-  </header>
-  
-  <section class="services">
-    <h2>Layanan Kami</h2>
-    <div class="services-grid">
-      <div class="service-card">
-        <h3>Facial Treatment</h3>
-        <p>Perawatan wajah intensif dengan produk premium</p>
-      </div>
-      <div class="service-card">
-        <h3>Laser Therapy</h3>
-        <p>Teknologi laser terkini untuk kulit bersinar</p>
-      </div>
-      <div class="service-card">
-        <h3>Anti Aging</h3>
-        <p>Kembalikan kemudaan kulitmu</p>
-      </div>
-    </div>
-  </section>
-  
-  <section class="testimonials">
-    <h2>Apa Kata Klien</h2>
-    <div class="testimonial">
-      <p>"Kulit saya jadi lebih bersih dan cerah setelah treatment di Aurora. Sangat puas!"</p>
-      <div class="author">- Sarah, Jakarta</div>
-    </div>
-    <div class="testimonial">
-      <p>"Pelayanan profesional dan hasil yang memuaskan. Sangat direkomendasikan!"</p>
-      <div class="author">- Dewi, Bandung</div>
-    </div>
-  </section>
-  
-  <footer>
-    <p>© 2024 Klinik Kecantikan Aurora. All rights reserved.</p>
-  </footer>
-</body>
-</html>`,
+    websiteHtml: ``,
   },
   {
     id: "ref-2",
@@ -112,7 +45,7 @@ export const references: Reference[] = [
       "FAQ accordion",
       "Countdown timer",
     ],
-    image: "/placeholder.svg",
+    image: "",
     suggestedPackage: "Landing Page Pro",
   },
   {
