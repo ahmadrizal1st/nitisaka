@@ -5,6 +5,7 @@ import {
   Tag,
   CheckCircle2,
   MessageCircle,
+  Lightbulb,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -205,10 +206,13 @@ export const AddonPackagesSection = () => {
         </div>
 
         <div className="mt-10 p-4 bg-muted/50 rounded-lg border text-center">
-          <p className="text-sm text-muted-foreground">
-            💡 <strong>Catatan:</strong> Harga domain mengikuti harga registrar
-            dan ketersediaan. Perpanjangan domain dibayar oleh klien. Hosting
-            aktif selama masa paket berjalan.
+          <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
+            <Lightbulb className="h-4 w-4 text-primary flex-shrink-0" />
+            <span>
+              <strong>Catatan:</strong> Harga domain mengikuti harga registrar
+              dan ketersediaan. Perpanjangan domain dibayar oleh klien. Hosting
+              aktif selama masa paket berjalan.
+            </span>
           </p>
         </div>
       </div>
