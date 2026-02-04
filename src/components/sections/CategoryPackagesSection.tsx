@@ -41,9 +41,9 @@ export const CategoryPackagesSection = () => {
         <Tabs
           value={activeCategory}
           onValueChange={setActiveCategory}
-          className="w-full"
+          className="w-full px-4 sm:px-0"
         >
-          <TabsList className="flex h-auto gap-2 bg-transparent justify-center mb-8 overflow-x-auto pb-2 scrollbar-hide max-w-full">
+          <TabsList className="flex h-auto gap-2 bg-transparent justify-start mb-8 pl-2 pr-4 overflow-x-auto scrollbar-hide max-w-full">
             {packageCategories.map((category) => {
               const Icon = categoryIcons[category.id];
               return (
