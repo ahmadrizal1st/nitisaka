@@ -226,8 +226,9 @@ export const references: Reference[] = [
       "Wholesale info",
       "Order form",
     ],
-    image: "/placeholder.svg",
+    image: "/references/kopi-nusantara-roastery.png",
     suggestedPackage: "Website UMKM Pro",
+    url: "https://rank-edit-89140048.figma.site/",
   },
   // Toko Online
   {
@@ -244,7 +245,7 @@ export const references: Reference[] = [
       "Keranjang belanja",
       "Checkout WhatsApp",
     ],
-    image: "/placeholder.svg",
+    image: "/references/fashion-store-trendy.png",
     suggestedPackage: "Toko Online Business",
   },
   {
@@ -585,8 +586,9 @@ export const references: Reference[] = [
       "Finishing options",
       "Pengiriman nasional",
     ],
-    image: "/placeholder.svg",
+    image: "/references/kerajinan-kayu-jati.png",
     suggestedPackage: "Website UMKM Business",
+    url: "https://heap-zebra-06197808.figma.site/",
   },
   {
     id: "ref-34",
@@ -602,8 +604,9 @@ export const references: Reference[] = [
       "Status cucian",
       "Membership diskon",
     ],
-    image: "/placeholder.svg",
+    image: "/references/laundry-kiloan.png",
     suggestedPackage: "Website UMKM Starter",
+    url: "https://sting-linen-77558774.figma.site/",
   },
   {
     id: "ref-35",
@@ -619,8 +622,9 @@ export const references: Reference[] = [
       "Pet hotel",
       "Konsultasi dokter",
     ],
-    image: "/placeholder.svg",
+    image: "/references/petshop-hewan.png",
     suggestedPackage: "Website UMKM Business",
+    url: "https://layer-brush-68471485.figma.site/",
   },
   {
     id: "ref-36",
@@ -636,8 +640,9 @@ export const references: Reference[] = [
       "Before after",
       "Estimasi biaya",
     ],
-    image: "/placeholder.svg",
+    image: "/references/jasa-arsitektur-interior.png",
     suggestedPackage: "Website UMKM Pro",
+    url: "https://create-rerun-84618325.figma.site/",
   },
   {
     id: "ref-37",
@@ -653,8 +658,9 @@ export const references: Reference[] = [
       "Driver option",
       "Area layanan",
     ],
-    image: "/placeholder.svg",
+    image: "/references/rental-mobil.png",
     suggestedPackage: "Website UMKM Business",
+    url: "https://table-launch-53972363.figma.site/",
   },
   // Additional Toko Online
   {
