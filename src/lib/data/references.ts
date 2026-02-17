@@ -511,8 +511,9 @@ export const references: Reference[] = [
       "Sertifikasi PADI",
       "Equipment rental",
     ],
-    image: "/placeholder.svg",
+    image: "/references/wisata-bahari-dive-center.png",
     suggestedPackage: "Tour & Travel Pro",
+    url: "https://feast-casual-77027913.figma.site/",
   },
   {
     id: "ref-29",
@@ -528,8 +529,9 @@ export const references: Reference[] = [
       "Private driver",
       "Dinner romantic",
     ],
-    image: "/placeholder.svg",
+    image: "/references/paket-honeymoon-bali.png",
     suggestedPackage: "Tour & Travel Pro",
+    url: "https://java-finch-79982868.figma.site/",
   },
   {
     id: "ref-30",
