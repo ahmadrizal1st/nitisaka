@@ -714,8 +714,9 @@ export const references: Reference[] = [
       "Compatibilty check",
       "Install service",
     ],
-    image: "/placeholder.svg",
+    image: "/references/aksesoris-motor.png",
     suggestedPackage: "Toko Online Business",
+    url: "https://calm-ready-72480219.figma.site/",
   },
   {
     id: "ref-40",
