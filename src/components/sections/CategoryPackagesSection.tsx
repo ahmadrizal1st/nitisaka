@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState } from "react";
 import {
   Layout,
@@ -10,7 +11,7 @@ import {
 } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { packageCategories } from "@/lib/data/packages";
-import { PackageCard } from "@/components/PackageCard";
+import { Pricing, PricingPlan } from "@/components/ui/pricing";
 
 const categoryIcons: Record<string, React.ElementType> = {
   "landing-page": Layout,
@@ -28,7 +29,13 @@ export const CategoryPackagesSection = () => {
   return (
     <section id="paket-detail" className="py-20 relative">
       <div className="container relative z-10">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight">
             Paket <span className="text-primary">Berdasarkan Kategori</span>
           </h2>
@@ -36,7 +43,7 @@ export const CategoryPackagesSection = () => {
             Detail lengkap paket untuk setiap jenis website. Pilih yang paling
             sesuai dengan kebutuhan bisnis Anda.
           </p>
-        </div>
+        </motion.div>
 
         <Tabs
           value={activeCategory}
@@ -59,22 +66,33 @@ export const CategoryPackagesSection = () => {
             })}
           </TabsList>
 
-          {packageCategories.map((category) => (
-            <TabsContent key={category.id} value={category.id} className="mt-0">
-              <div className="text-center mb-8">
-                <h3 className="text-xl font-semibold text-foreground">
-                  {category.name}
-                </h3>
-                <p className="text-muted-foreground">{category.description}</p>
-              </div>
+          {packageCategories.map((category) => {
+            const pricingPlans: PricingPlan[] = category.packages.map((pkg) => ({
+              name: pkg.name,
+              price: pkg.priceMin,
+              period: "termasuk hosting & domain",
+              features: pkg.features,
+              description: pkg.description,
+              buttonText: "Pilih " + pkg.name,
+              href: `https://wa.me/6285312000446?text=Halo,%20saya%20tertarik%20dengan%20paket%20${pkg.name}%20(${category.name})`,
+              isPopular: pkg.popular || false,
+            }));
 
-              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
-                {category.packages.map((pkg) => (
-                  <PackageCard key={pkg.id} pkg={pkg} showAllFeatures />
-                ))}
-              </div>
-            </TabsContent>
-          ))}
+            return (
+              <TabsContent key={category.id} value={category.id} className="mt-0">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight">
+                    {category.name}
+                  </h3>
+                  <p className="text-muted-foreground text-base max-w-2xl mx-auto mt-2">{category.description}</p>
+                </div>
+
+                <div className="max-w-5xl mx-auto">
+                  <Pricing plans={pricingPlans} title="" description="" />
+                </div>
+              </TabsContent>
+            );
+          })}
         </Tabs>
       </div>
     </section>

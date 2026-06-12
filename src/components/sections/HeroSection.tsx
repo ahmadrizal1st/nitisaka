@@ -1,4 +1,6 @@
-import { ArrowRight, Code, Zap, ShoppingBag, Search, Monitor, LayoutDashboard } from "lucide-react";
+import { motion } from "framer-motion";
+import { ArrowRight, Code, Zap, ShoppingBag, Search, Monitor, LayoutDashboard, Users, Shield, Layers } from "lucide-react";
+import { GlowyWavesHero } from "@/components/ui/glowy-waves-hero-shadcnui";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { useState, useEffect, useRef } from "react";
 
@@ -180,16 +182,16 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative pt-16 pb-48 lg:pt-32 lg:pb-64 z-20 bg-background overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-0 -mr-20 -mt-20 h-96 w-96 rounded-full bg-primary/20 blur-[100px]" />
-      </div>
-
+    <GlowyWavesHero className="pt-16 pb-16 lg:pt-32 lg:pb-24 z-20">
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           {/* Top Content */}
-          <div className="text-center max-w-3xl mx-auto mb-12">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-center max-w-3xl mx-auto mb-12"
+          >
             <p className="text-primary text-[10px] sm:text-xs font-bold tracking-[0.15em] uppercase mb-6">
               Step by step, build your future.
             </p>
@@ -200,10 +202,15 @@ export const HeroSection = () => {
               <span className="text-primary">Website & Software</span><br className="hidden sm:block" />
               yang Tepat.
             </h1>
-          </div>
+          </motion.div>
 
           {/* Illustration - Animated Mockups */}
-          <div className="relative mx-auto w-full max-w-5xl mb-12 group">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95, y: 20 }}
+            animate={{ opacity: 1, scale: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative mx-auto w-full max-w-5xl mb-12 group"
+          >
             <div 
               ref={containerRef}
               className="relative w-full rounded-xl border border-border bg-card/90 backdrop-blur-xl shadow-2xl overflow-hidden perspective-1000"
@@ -254,10 +261,15 @@ export const HeroSection = () => {
                 <LayoutDashboard className="h-4 w-4" />
               </button>
             </div>
-          </div>
+          </motion.div>
 
           {/* Bottom Content */}
-          <div className="text-center max-w-2xl mx-auto mt-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-center max-w-2xl mx-auto mt-4 mb-20 lg:mb-24"
+          >
             <p className="text-lg text-muted-foreground mb-8">
               Solusi digital yang dirancang untuk meningkatkan kredibilitas, mengotomasi operasional, dan mendorong pertumbuhan bisnis Anda.
             </p>
@@ -273,10 +285,50 @@ export const HeroSection = () => {
                 Lihat Portofolio
               </a>
             </div>
+          </motion.div>
+
+          {/* 4 Column Features - Moved from MockupSection to naturally sit at the bottom of Hero */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto relative z-30">
+            {[
+              {
+                icon: <Zap className="h-6 w-6 text-primary" />,
+                title: "Performa Cepat",
+                desc: "Website dioptimasi penuh agar dimuat seketika tanpa waktu tunggu lama."
+              },
+              {
+                icon: <Monitor className="h-6 w-6 text-primary" />,
+                title: "Desain Responsif",
+                desc: "Tampilan memukau dan sempurna di layar HP, tablet, maupun desktop."
+              },
+              {
+                icon: <Shield className="h-6 w-6 text-primary" />,
+                title: "Keamanan Ganda",
+                desc: "Sistem Anda diproteksi dengan keamanan tingkat tinggi dari serangan siber."
+              },
+              {
+                icon: <Users className="h-6 w-6 text-primary" />,
+                title: "Dukungan Penuh",
+                desc: "Tim support kami selalu siap membantu setiap kendala teknis yang Anda alami."
+              }
+            ].map((feature, idx) => (
+              <motion.div 
+                key={idx} 
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 + idx * 0.1 }}
+                className="bg-card p-6 rounded-xl border border-border shadow-sm flex flex-col h-full relative z-10"
+              >
+                <div className="mb-4 h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
+                  {feature.icon}
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
+                <p className="text-sm text-muted-foreground flex-1 leading-relaxed">{feature.desc}</p>
+              </motion.div>
+            ))}
           </div>
 
         </div>
       </div>
-    </section>
+    </GlowyWavesHero>
   );
 };

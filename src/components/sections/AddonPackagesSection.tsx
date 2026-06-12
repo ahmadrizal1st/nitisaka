@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   Globe,
   RefreshCw,
@@ -114,7 +115,13 @@ export const AddonPackagesSection = () => {
   return (
     <section id="paket-tambahan" className="py-20 relative">
       <div className="container relative z-10">
-        <div className="text-center mb-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-foreground tracking-tight">
             Paket <span className="text-primary">Tambahan</span>
           </h2>
@@ -122,47 +129,63 @@ export const AddonPackagesSection = () => {
             Tingkatkan dan perpanjang layanan website Anda dengan paket tambahan
             kami
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
           {addonPackages.map((pkg, index) => (
-            <div
+            <motion.div
               key={index}
-              className="glass-card group transition-all duration-300 hover:border-primary/30 flex flex-col rounded-xl overflow-hidden p-6"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              className="flex flex-col h-full bg-background/40 backdrop-blur-xl border border-border/60 hover:border-primary/40 rounded-3xl p-5 md:p-6 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden relative group"
             >
-              <div className="flex-1 flex flex-col">
-                <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary group-hover:bg-primary group-hover:text-primary-foreground transition-colors shrink-0">
-                  <pkg.icon className="h-6 w-6" />
-                </div>
-                <h3 className="mb-2 text-xl font-semibold text-foreground">
-                  {pkg.title}
-                </h3>
-                <p className="text-muted-foreground mb-4 text-sm leading-relaxed">{pkg.description}</p>
+              {/* Watermark Icon (Top Right) */}
+              <div className="absolute -top-12 -right-12 w-48 h-48 bg-primary/15 rounded-full flex items-center justify-center pointer-events-none z-0 group-hover:scale-110 group-hover:bg-primary/25 transition-all duration-700">
+                <pkg.icon className="w-28 h-28 text-background/90 drop-shadow-sm mr-6 mt-6" strokeWidth={2.5} />
+              </div>
 
+              {/* Top Area (Info) */}
+              <div className="w-full flex flex-col z-10 border-b border-border/40 pb-5 mb-5 mt-2">
+                <div className="flex-1">
+                  <h3 className="mb-2 text-xl font-extrabold text-foreground tracking-tight">
+                    {pkg.title}
+                  </h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed mb-4">
+                    {pkg.description}
+                  </p>
+                </div>
+                <div className="mt-auto">
+                  <p className="text-xs font-bold text-muted-foreground mb-1 uppercase tracking-widest">Mulai Dari</p>
+                  <p className="text-2xl font-black text-foreground">
+                    {pkg.price.replace('Mulai ', '')}
+                  </p>
+                </div>
+              </div>
+
+              {/* Bottom Area (Options & Actions) */}
+              <div className="w-full flex flex-col flex-1 z-10 justify-between">
                 {pkg.accordion ? (
-                  <div className="flex-1">
+                  <div className="flex-1 mb-5">
                     <Accordion type="single" collapsible className="w-full">
                       {pkg.accordionData?.map((section, idx) => (
-                        <AccordionItem key={idx} value={`item-${idx}`}>
-                          <AccordionTrigger className="py-2 px-0 text-sm font-medium">
+                        <AccordionItem key={idx} value={`item-${idx}`} className="border-border/50">
+                          <AccordionTrigger className="py-3 px-1 text-sm font-bold hover:no-underline hover:text-primary transition-colors text-left">
                             {section.period}
                           </AccordionTrigger>
-                          <AccordionContent className="pb-0">
-                            <ul className="space-y-2">
+                          <AccordionContent className="pb-3">
+                            <ul className="space-y-1.5 mt-1">
                               {section.items.map((item, i) => (
                                 <li
                                   key={i}
-                                  className="flex items-start gap-2 text-sm"
+                                  className="flex items-start justify-between text-xs bg-background/60 py-2 px-3 rounded-lg border border-border/40 gap-3 hover:bg-background transition-colors"
                                 >
-                                  <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                                  <div>
-                                    <span className="text-muted-foreground block">
-                                      {item.name}
-                                    </span>
-                                    <span className="font-medium text-foreground">
-                                      {item.price}
-                                    </span>
+                                  <div className="flex items-start gap-2 flex-1 min-w-0">
+                                    <CheckCircle2 className="h-3.5 w-3.5 text-primary flex-shrink-0 mt-0.5" />
+                                    <span className="text-foreground font-medium break-words leading-tight">{item.name}</span>
                                   </div>
+                                  <span className="font-bold text-foreground whitespace-nowrap flex-shrink-0 text-right mt-0.5">{item.price}</span>
                                 </li>
                               ))}
                             </ul>
@@ -172,40 +195,47 @@ export const AddonPackagesSection = () => {
                     </Accordion>
                   </div>
                 ) : (
-                  <ul className="space-y-2 mb-4 flex-1">
+                  <ul className="space-y-1.5 flex-1 mb-5 mt-2">
                     {pkg.options.map((option, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start gap-2 text-sm text-muted-foreground"
+                        className="flex items-start justify-between text-xs bg-background/60 py-2 px-3 rounded-lg border border-border/40 gap-3 hover:bg-background transition-colors"
                       >
-                        <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                        <div>
-                          <span>{option.name}</span>
-                          <span className="block font-medium text-foreground">
-                            {option.price}
-                          </span>
+                        <div className="flex items-start gap-2 flex-1 min-w-0">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-foreground font-medium break-words leading-tight">{option.name}</span>
                         </div>
+                        <span className="font-bold text-foreground whitespace-nowrap flex-shrink-0 text-right mt-0.5">{option.price}</span>
                       </li>
                     ))}
                   </ul>
                 )}
 
-                <p className="text-sm font-medium text-primary mt-4">
-                  {pkg.price}
-                </p>
-                <Button
-                  onClick={() => handleWhatsApp(pkg.waMessage)}
-                  className="w-full bg-whatsapp hover:bg-whatsapp/90 text-white mt-4"
-                >
-                  <MessageCircle className="mr-2 h-4 w-4" />
-                  Pesan Sekarang
-                </Button>
+                <div className="mt-auto">
+                  <Button
+                    onClick={() => handleWhatsApp(pkg.waMessage)}
+                    className="group relative w-full gap-2 overflow-hidden text-base font-semibold tracking-tight py-6 transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-1 bg-primary text-primary-foreground"
+                  >
+                    <MessageCircle className="h-5 w-5" />
+                    Pesan Sekarang
+                  </Button>
+                </div>
               </div>
-            </div>
+
+              {/* Ambient Glow */}
+              <div className="absolute -top-32 -left-32 w-64 h-64 bg-primary/5 rounded-full blur-[80px] group-hover:bg-primary/15 transition-colors duration-700 pointer-events-none z-0"></div>
+              <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-secondary/5 rounded-full blur-[80px] group-hover:bg-secondary/15 transition-colors duration-700 pointer-events-none z-0"></div>
+            </motion.div>
           ))}
         </div>
 
-        <div className="mt-10 p-4 bg-muted/50 rounded-lg border text-center">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-10 p-4 bg-muted/50 rounded-lg border text-center"
+        >
           <p className="text-sm text-muted-foreground flex items-center justify-center gap-2">
             <Lightbulb className="h-4 w-4 text-primary flex-shrink-0" />
             <span>
@@ -214,7 +244,7 @@ export const AddonPackagesSection = () => {
               aktif selama masa paket berjalan.
             </span>
           </p>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

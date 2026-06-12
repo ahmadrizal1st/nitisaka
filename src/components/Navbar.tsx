@@ -1,22 +1,140 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { Menu, X, Code, Globe, PenTool, Database, Zap, Shield, ChevronDown, MonitorSmartphone, Monitor, Layers, TrendingUp, Wrench } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { ThemeToggle } from "./ThemeToggle";
 
-export const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  NavGridCard,
+  NavSmallItem,
+  NavLargeItem,
+  NavItemMobile,
+  type NavItemType,
+} from "@/components/ui/navigation-menu";
 
-  const navLinks = [
-    { href: "/#layanan", label: "Layanan" },
-    { href: "/#paket", label: "Paket" },
-    { href: "/#kenapa-kami", label: "Kenapa Kami" },
-    { href: "/reference", label: "Referensi", isRoute: true },
-  ];
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+
+const servicesLinks: NavItemType[] = [
+  {
+    title: "Company Profile",
+    href: "/#layanan",
+    description: "Website profesional untuk membangun kredibilitas bisnis Anda",
+    icon: Globe,
+  },
+  {
+    title: "Web Application",
+    href: "/#layanan",
+    description: "Sistem informasi kustom sesuai kebutuhan operasional",
+    icon: Code,
+  },
+  {
+    title: "E-Commerce",
+    href: "/#layanan",
+    description: "Toko online lengkap dengan integrasi pembayaran",
+    icon: MonitorSmartphone,
+  },
+  {
+    title: "Landing Page",
+    href: "/#layanan",
+    description: "Halaman konversi tinggi untuk campaign marketing",
+    icon: Zap,
+  },
+  {
+    title: "UI/UX Design",
+    href: "/#layanan",
+    description: "Desain antarmuka modern dan user-friendly",
+    icon: PenTool,
+  },
+  {
+    title: "API Integration",
+    href: "/#layanan",
+    description: "Penghubung sistem handal dan aman",
+    icon: Database,
+  },
+  {
+    title: "SEO Optimization",
+    href: "/#layanan",
+    description: "Tingkatkan ranking mesin pencari",
+    icon: TrendingUp,
+  },
+  {
+    title: "Maintenance",
+    href: "/#layanan",
+    description: "Dukungan teknis responsif",
+    icon: Wrench,
+  },
+];
+
+const packagesLinks: NavItemType[] = [
+  {
+    title: "Simple Packages",
+    href: "/#paket",
+    description: "Pilihan paket Starter, Pro, dan Premium untuk segala kebutuhan",
+    icon: Layers,
+  },
+  {
+    title: "Category Packages",
+    href: "/#paket-kategori",
+    description: "Paket khusus berdasarkan jenis industri bisnis Anda",
+    icon: Monitor,
+  },
+  {
+    title: "Keamanan Ganda",
+    href: "/#kenapa-kami",
+    description: "Proteksi penuh dari serangan siber",
+    icon: Shield,
+  },
+  {
+    title: "Maintenance",
+    href: "/#addon-packages",
+    description: "Layanan dukungan dan pemeliharaan server",
+    icon: PenTool,
+  },
+];
+
+export const Navbar = () => {
+  const navigate = useNavigate();
+
+  const handleLinkClick = (href: string) => {
+    if (href.startsWith("/#")) {
+      const targetId = href.split("#")[1];
+      if (window.location.pathname !== "/") {
+        navigate(href);
+      } else {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        } else {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
+    } else {
+      navigate(href);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
-    <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/60 backdrop-blur-md supports-[backdrop-filter]:bg-background/40">
+    <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
@@ -25,85 +143,188 @@ export const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map((link) =>
-            link.isRoute ? (
-              <Link
-                key={link.href}
-                to={link.href}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {link.label}
-              </a>
-            ),
-          )}
-          <ThemeToggle />
-          <WhatsAppButton size="sm">Konsultasi</WhatsAppButton>
-        </nav>
+        <div className="hidden md:flex items-center flex-1 justify-center">
+          <NavigationMenu>
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-accent/50 focus:bg-accent/50">Layanan</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-full md:w-[700px] lg:w-[850px] md:grid-cols-[1fr_.40fr]">
+                    <ul className="grid grow grid-cols-2 gap-4 p-4 md:border-r">
+                      {servicesLinks.slice(0, 2).map((link) => (
+                        <li key={link.title}>
+                          <NavGridCard link={link} onClick={() => handleLinkClick(link.href)} className="min-h-36 cursor-pointer" />
+                        </li>
+                      ))}
+                      <div className="col-span-2 grid grid-cols-3 gap-x-4">
+                        {servicesLinks.slice(2, 5).map((link) => (
+                          <li key={link.title}>
+                            <NavLargeItem link={link} onClick={() => handleLinkClick(link.href)} className="cursor-pointer hover:bg-accent rounded-md" />
+                          </li>
+                        ))}
+                      </div>
+                    </ul>
+                    <ul className="space-y-2 p-4">
+                      {servicesLinks.slice(5, 8).map((link) => (
+                        <li key={link.title}>
+                          <NavLargeItem
+                            link={link}
+                            onClick={() => handleLinkClick(link.href)}
+                            className="cursor-pointer hover:bg-accent rounded-md"
+                          />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
 
-        {/* Mobile Menu Button */}
-        <Button
-          variant="ghost"
-          size="icon"
-          className="md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          {isMenuOpen ? (
-            <X className="h-5 w-5" />
-          ) : (
-            <Menu className="h-5 w-5" />
-          )}
-        </Button>
-        
-        {/* Mobile Theme Toggle */}
-        <div className="md:hidden flex items-center ml-2">
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="bg-transparent hover:bg-accent/50 focus:bg-accent/50">Paket</NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <div className="grid w-full md:w-[500px] lg:w-[600px] md:grid-cols-[1fr_.50fr]">
+                    <ul className="grid grow gap-4 p-4 md:border-r">
+                      {packagesLinks.slice(0, 2).map((link) => (
+                        <li key={link.title}>
+                          <NavGridCard link={link} onClick={() => handleLinkClick(link.href)} className="cursor-pointer" />
+                        </li>
+                      ))}
+                    </ul>
+                    <ul className="space-y-2 p-4">
+                      {packagesLinks.slice(2).map((link) => (
+                        <li key={link.title}>
+                          <NavLargeItem link={link} onClick={() => handleLinkClick(link.href)} className="cursor-pointer hover:bg-accent rounded-md" />
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink 
+                  onClick={() => handleLinkClick("/reference")}
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent"
+                >
+                  Portofolio
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+              <NavigationMenuItem>
+                <NavigationMenuLink 
+                  onClick={() => handleLinkClick("/#kenapa-kami")}
+                  className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent"
+                >
+                  Kenapa Kami
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+        </div>
+
+        {/* Right Section (Theme & CTA) */}
+        <div className="hidden md:flex items-center gap-2">
           <ThemeToggle />
+          <WhatsAppButton size="sm">Konsultasi Gratis</WhatsAppButton>
+        </div>
+
+        {/* Mobile Header Elements */}
+        <div className="md:hidden flex items-center gap-2">
+          <ThemeToggle />
+          <MobileNav handleLinkClick={handleLinkClick} />
         </div>
       </div>
-
-      {/* Mobile Navigation */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t bg-background">
-          <nav className="container py-4 flex flex-col gap-4">
-            {navLinks.map((link) =>
-              link.isRoute ? (
-                <Link
-                  key={link.href}
-                  to={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  {link.label}
-                </Link>
-              ) : (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </a>
-              ),
-            )}
-            <WhatsAppButton size="sm" className="w-full">
-              Konsultasi Gratis
-            </WhatsAppButton>
-          </nav>
-        </div>
-      )}
     </header>
   );
 };
+
+function MobileNav({ handleLinkClick }: { handleLinkClick: (href: string) => void }) {
+  const sections = [
+    {
+      id: 'Layanan',
+      list: servicesLinks,
+    },
+    {
+      id: 'Paket',
+      list: packagesLinks,
+    },
+  ];
+
+  return (
+    <Sheet>
+      <SheetTrigger asChild>
+        <Button size="icon" variant="ghost" className="rounded-full">
+          <Menu className="size-5" />
+        </Button>
+      </SheetTrigger>
+      <SheetContent
+        className="bg-background/95 supports-[backdrop-filter]:bg-background/80 w-full gap-0 backdrop-blur-xl border-l-0"
+        showClose={false}
+      >
+        <div className="flex h-16 items-center justify-end border-b px-4">
+          <SheetClose asChild>
+            <Button size="icon" variant="ghost" className="rounded-full">
+              <X className="size-5" />
+              <span className="sr-only">Close</span>
+            </Button>
+          </SheetClose>
+        </div>
+        <div className="container grid gap-y-2 overflow-y-auto px-4 pt-5 pb-12">
+          <Accordion type="single" collapsible className="w-full">
+            {sections.map((section) => (
+              <AccordionItem key={section.id} value={section.id} className="border-b-border/30">
+                <AccordionTrigger className="capitalize hover:no-underline text-base font-semibold py-4">
+                  {section.id}
+                </AccordionTrigger>
+                <AccordionContent className="space-y-1 pb-4">
+                  <ul className="grid gap-2">
+                    {section.list.map((link) => (
+                      <li key={link.title}>
+                        <SheetClose asChild>
+                          <NavItemMobile 
+                            item={link} 
+                            onClick={() => handleLinkClick(link.href)} 
+                            className="cursor-pointer border border-border/10 shadow-sm" 
+                          />
+                        </SheetClose>
+                      </li>
+                    ))}
+                  </ul>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+          
+          <div className="mt-4 flex flex-col gap-3">
+            <SheetClose asChild>
+              <Button 
+                variant="outline" 
+                className="w-full justify-start h-12 text-base font-semibold border-border/30"
+                onClick={() => handleLinkClick("/reference")}
+              >
+                Portofolio
+              </Button>
+            </SheetClose>
+            <SheetClose asChild>
+              <Button 
+                variant="outline" 
+                className="w-full justify-start h-12 text-base font-semibold border-border/30"
+                onClick={() => handleLinkClick("/#kenapa-kami")}
+              >
+                Kenapa Kami
+              </Button>
+            </SheetClose>
+            
+            <SheetClose asChild>
+              <div className="mt-6">
+                <WhatsAppButton className="w-full h-12 text-base shadow-lg shadow-primary/20">
+                  Konsultasi Gratis Sekarang
+                </WhatsAppButton>
+              </div>
+            </SheetClose>
+          </div>
+        </div>
+      </SheetContent>
+    </Sheet>
+  );
+}
