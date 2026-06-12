@@ -882,7 +882,7 @@ export const references: Reference[] = [
       "Booking form",
       "Special offers",
     ],
-    image: "/placeholder-light.svg",
+    image: "/references/dental-clinic-premium.png",
     suggestedPackage: "Landing Page Business",
   },
   {
@@ -899,7 +899,7 @@ export const references: Reference[] = [
       "Location map",
       "Book a tour",
     ],
-    image: "/placeholder-light.svg",
+    image: "/references/coworking-space-urban.png",
     suggestedPackage: "Landing Page Pro",
   },
   {
@@ -916,7 +916,7 @@ export const references: Reference[] = [
       "Size guide",
       "Instagram feed",
     ],
-    image: "/placeholder-light.svg",
+    image: "/references/brand-fashion-lokal.png",
     suggestedPackage: "Landing Page Business",
   },
   // Additional references
