@@ -82,10 +82,8 @@ export const JourneySection = () => {
                         <step.icon className="w-3.5 h-3.5 text-white" />
                      </div>
                    </div>
-                   {/* Mobile vertical line connecting nodes */}
-                   {index < steps.length - 1 && (
-                     <div className="lg:hidden absolute top-12 bottom-[-48px] left-1/2 -translate-x-1/2 w-[2px] bg-primary/20 -z-10"></div>
-                   )}
+                   {/* Mobile vertical line connecting nodes to text */}
+                   <div className="lg:hidden absolute top-12 bottom-[-48px] left-1/2 -translate-x-1/2 w-[2px] bg-primary/20 -z-10"></div>
                 </div>
 
                 {/* Content */}
