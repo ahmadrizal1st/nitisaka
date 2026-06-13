@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Layout,
   Building2,
@@ -26,8 +26,24 @@ const categoryIcons: Record<string, React.ElementType> = {
 export const CategoryPackagesSection = () => {
   const [activeCategory, setActiveCategory] = useState(packageCategories[0].id);
 
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace("#", "");
+      if (packageCategories.some(c => c.id === hash)) {
+        setActiveCategory(hash);
+      }
+    };
+
+    // Check hash on mount
+    handleHashChange();
+
+    // Listen for hash changes
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
   return (
-    <section id="paket-detail" className="py-20 relative">
+    <section id="category-packages" className="py-20 relative">
       <div className="container relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
@@ -79,7 +95,7 @@ export const CategoryPackagesSection = () => {
             }));
 
             return (
-              <TabsContent key={category.id} value={category.id} className="mt-0">
+              <TabsContent key={category.id} value={category.id} id={category.id} className="mt-0 pt-16 -mt-16">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight">
                     {category.name}

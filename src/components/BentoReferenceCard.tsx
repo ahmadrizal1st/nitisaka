@@ -46,6 +46,8 @@ export const BentoReferenceCard = ({ reference, featured = false }: BentoReferen
           e.currentTarget.src = currentTheme === "dark" ? "/placeholder-dark.svg" : "/placeholder-light.svg";
         }}
         className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+        loading="lazy"
+        decoding="async"
       />
 
       {/* Dark Overlay gradient for readability */}

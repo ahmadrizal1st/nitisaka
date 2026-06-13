@@ -279,7 +279,7 @@ export const HeroSection = () => {
                 Konsultasi Gratis <ArrowRight className="ml-2 h-4 w-4" />
               </WhatsAppButton>
               <a
-                href="#portofolio"
+                href="/#portofolio"
                 className="inline-flex h-12 items-center justify-center rounded-lg border border-border bg-card/50 backdrop-blur-md px-8 py-3 text-sm font-medium text-foreground hover:bg-accent hover:text-accent-foreground transition-colors shadow-sm"
               >
                 Lihat Portofolio

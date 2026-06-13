@@ -165,7 +165,7 @@ function NavGridCard({
 }) {
 	return (
 		<NavigationMenuPrimitive.Link asChild>
-			<GridCard {...props} onClick={() => { if(link.href.startsWith('/#')) { window.scrollTo({ top: 0, behavior: "smooth" }); } }}>
+			<GridCard {...props}>
 				{link.icon && (
 					<link.icon className="text-foreground/80 relative size-5" />
 				)}

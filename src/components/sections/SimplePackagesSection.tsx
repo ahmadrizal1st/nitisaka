@@ -14,7 +14,7 @@ export const SimplePackagesSection = () => {
   }));
 
   return (
-    <section id="paket" className="py-20 relative overflow-hidden">
+    <section id="popular-packages" className="py-20 relative overflow-hidden">
       <div className="container relative z-10">
         <Pricing
           plans={pricingPlans}

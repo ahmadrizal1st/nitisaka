@@ -12,10 +12,18 @@ import { getReferencesByCategory, categories } from "@/lib/data/references";
 const ReferencePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // Initialize state from URL parameters
-  const [activeCategory, setActiveCategory] = useState(
-    searchParams.get("category") || "all",
-  );
+  // Derive active category from URL parameters
+  const activeCategory = searchParams.get("category") || "all";
+  
+  const setActiveCategory = (category: string) => {
+    const params = new URLSearchParams(searchParams.toString());
+    if (category !== "all") {
+      params.set("category", category);
+    } else {
+      params.delete("category");
+    }
+    setSearchParams(params);
+  };
   const [searchQuery, setSearchQuery] = useState(searchParams.get("q") || "");
 
   // Infinite scroll state
@@ -36,18 +44,7 @@ const ReferencePage = () => {
     setSearchParams(params);
   }, [searchQuery, setSearchParams]);
 
-  // Update URL when category changes
-  useEffect(() => {
-    const params = new URLSearchParams(searchParams.toString());
 
-    if (activeCategory !== "all") {
-      params.set("category", activeCategory);
-    } else {
-      params.delete("category");
-    }
-
-    setSearchParams(params);
-  }, [activeCategory, setSearchParams, searchParams]);
 
   // Get filtered references
   const filteredReferences = getReferencesByCategory(activeCategory).filter(
@@ -105,27 +102,15 @@ const ReferencePage = () => {
 
       <main className="flex-1">
         {/* Header */}
-        <section className="bg-gradient-to-br from-primary/5 via-background to-accent/30 py-12">
+        <section className="bg-background pt-16 pb-6">
           <div className="container">
-            <Link
-              to="/"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors mb-6"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Kembali ke Beranda
-            </Link>
-
-            <h1 className="text-3xl font-bold text-foreground sm:text-4xl">
+            <h1 className="text-3xl font-bold text-foreground sm:text-4xl text-center">
               Referensi <span className="text-primary">Website</span>
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
-              Jelajahi koleksi contoh desain website kami. Temukan inspirasi
-              yang cocok untuk bisnis Anda.
-            </p>
 
             {/* Search & Filter */}
-            <div className="mt-8 flex flex-col sm:flex-row gap-4">
-              <div className="relative flex-1 max-w-md">
+            <div className="mt-8 flex justify-center">
+              <div className="relative w-full max-w-md">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
                 <Input
                   placeholder="Cari referensi..."
@@ -137,7 +122,7 @@ const ReferencePage = () => {
             </div>
 
             {/* Category Filter */}
-            <div className="mt-6 flex flex-wrap gap-2">
+            <div className="mt-6 flex flex-wrap justify-center gap-2">
               {categories.map((category) => (
                 <Button
                   key={category.id}
@@ -155,7 +140,7 @@ const ReferencePage = () => {
         </section>
 
         {/* References Grid */}
-        <section className="py-12">
+        <section className="pt-6 pb-12">
           <div className="container">
             {filteredReferences.length > 0 ? (
               <>
@@ -164,8 +149,19 @@ const ReferencePage = () => {
                   {filteredReferences.length} referensi
                 </p>
                 <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                  {displayedReferences.map((reference) => (
-                    <ReferenceCard key={reference.id} reference={reference} />
+                  {displayedReferences.map((reference, index) => (
+                    <div
+                      key={reference.id}
+                      className="masonry-card-wrapper"
+                      style={
+                        {
+                          '--side': index % 2 === 0 ? 1 : -1,
+                          '--amp': Math.ceil((index % 8) / 2),
+                        } as React.CSSProperties
+                      }
+                    >
+                      <ReferenceCard reference={reference} />
+                    </div>
                   ))}
                 </div>
 

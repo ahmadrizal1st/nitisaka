@@ -113,7 +113,7 @@ export const AddonPackagesSection = () => {
   };
 
   return (
-    <section id="paket-tambahan" className="py-20 relative">
+    <section id="additional-packages" className="py-20 relative">
       <div className="container relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}

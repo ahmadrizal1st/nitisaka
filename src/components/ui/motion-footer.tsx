@@ -326,12 +326,15 @@ export function CinematicFooter() {
             <div ref={linksRef} className="flex flex-col items-center gap-4 md:gap-6 w-full px-2 md:px-0">
               {/* Main Actions (Primary) */}
               <div className="flex flex-col sm:flex-row justify-center gap-3 md:gap-4 w-full">
-                <MagneticButton as="a" href="#konsultasi" className="footer-glass-pill w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center justify-center gap-3 group">
+                <MagneticButton as="a" href="https://wa.me/6285312000446?text=Halo Nitisaka Studio, saya ingin konsultasi mengenai pembuatan website." target="_blank" rel="noopener noreferrer" className="footer-glass-pill w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center justify-center gap-3 group">
                   <MessageCircle className="w-5 h-5 text-primary group-hover:text-foreground transition-colors" />
                   Konsultasi Gratis
                 </MagneticButton>
                 
-                <MagneticButton as="a" href="#services" className="footer-glass-pill w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center justify-center gap-3 group">
+                <MagneticButton as="a" href="/#layanan" onClick={(e) => {
+                  e.preventDefault();
+                  document.getElementById('layanan')?.scrollIntoView({ behavior: 'smooth' });
+                }} className="footer-glass-pill w-full sm:w-auto px-8 md:px-10 py-4 md:py-5 rounded-full text-foreground font-bold text-sm md:text-base flex items-center justify-center gap-3 group">
                   <Rocket className="w-5 h-5 text-primary group-hover:text-foreground transition-colors" />
                   Lihat Layanan
                 </MagneticButton>

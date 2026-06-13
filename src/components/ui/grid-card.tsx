@@ -28,8 +28,8 @@ export function GridCard({
 				</div>
 				<div
 					className={cn(
-						'absolute -inset-[10%] opacity-0 blur-[50px] transition-opacity duration-150 group-hover:opacity-10',
-						'bg-[conic-gradient(#F35066_0deg,#F35066_117deg,#9071F9_180deg,#5182FC_240deg,#F35066_360deg)]',
+						'absolute -inset-[10%] opacity-0 blur-[50px] transition-opacity duration-150 group-hover:opacity-[0.15]',
+						'bg-[conic-gradient(#059669_0deg,#34d399_117deg,#10b981_180deg,#047857_240deg,#059669_360deg)]',
 					)}
 				/>
 			</div>
