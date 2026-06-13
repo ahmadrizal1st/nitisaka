@@ -138,37 +138,37 @@ const packagesLinks: NavItemType[] = [
 const portfolioLinks: NavItemType[] = [
   {
     title: "Landing Page",
-    href: "/reference?category=landing-page",
+    href: "/reference?category=landing-page#reference-grid",
     description: "Website satu halaman yang fokus pada konversi",
     icon: Layout,
   },
   {
     title: "Company Profile",
-    href: "/reference?category=company-profile",
+    href: "/reference?category=company-profile#reference-grid",
     description: "Website profesional untuk profil perusahaan",
     icon: Building2,
   },
   {
     title: "UMKM & Bisnis",
-    href: "/reference?category=umkm-bisnis",
+    href: "/reference?category=umkm-bisnis#reference-grid",
     description: "Website untuk UMKM dan bisnis lokal",
     icon: Store,
   },
   {
     title: "Toko Online",
-    href: "/reference?category=toko-online",
+    href: "/reference?category=toko-online#reference-grid",
     description: "Website e-commerce untuk jualan online",
     icon: ShoppingCart,
   },
   {
     title: "Tour & Travel",
-    href: "/reference?category=tour-travel",
+    href: "/reference?category=tour-travel#reference-grid",
     description: "Website promosi paket tour dan wisata",
     icon: MapPin,
   },
   {
     title: "Custom System",
-    href: "/reference?category=custom-system",
+    href: "/reference?category=custom-system#reference-grid",
     description: "Sistem web custom sesuai kebutuhan",
     icon: Settings,
   },
@@ -178,23 +178,38 @@ export const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLinkClick = (href: string) => {
-    if (href.startsWith("/#")) {
+    if (href.startsWith("/#") && window.location.pathname === "/") {
       const targetId = href.split("#")[1];
-      if (window.location.pathname !== "/") {
-        navigate(href);
-      } else {
-        const element = document.getElementById(targetId);
+      
+      window.history.pushState(null, "", href);
+      window.dispatchEvent(new Event("hashchange"));
+      
+      setTimeout(() => {
+        let element = document.getElementById(targetId);
+        if (!element) {
+          element = document.getElementById("category-packages");
+        }
+        
         if (element) {
           element.scrollIntoView({ behavior: "smooth" });
-          window.history.pushState(null, "", href);
-          window.dispatchEvent(new Event("hashchange"));
         } else {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
-      }
+      }, 100);
     } else {
       navigate(href);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (!href.includes("#")) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        // If we are already on the same page but changing search params + hash
+        const targetId = href.split("#")[1];
+        setTimeout(() => {
+          const element = document.getElementById(targetId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      }
     }
   };
 

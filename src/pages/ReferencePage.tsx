@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link, useSearchParams } from "react-router-dom";
+import { Link, useSearchParams, useLocation } from "react-router-dom";
 import { Search, ArrowLeft, Loader2, ChevronDown } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
@@ -11,6 +11,7 @@ import { getReferencesByCategory, categories } from "@/lib/data/references";
 
 const ReferencePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const location = useLocation();
 
   // Derive active category from URL parameters
   const activeCategory = searchParams.get("category") || "all";
@@ -44,7 +45,18 @@ const ReferencePage = () => {
     setSearchParams(params);
   }, [searchQuery, setSearchParams]);
 
-
+  // Auto scroll to hash on load or when navigating to a hash
+  useEffect(() => {
+    if (location.hash) {
+      const targetId = location.hash.substring(1);
+      setTimeout(() => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+    }
+  }, [location]);
 
   // Get filtered references
   const filteredReferences = getReferencesByCategory(activeCategory).filter(
@@ -140,7 +152,7 @@ const ReferencePage = () => {
         </section>
 
         {/* References Grid */}
-        <section className="pt-6 pb-12">
+        <section id="reference-grid" className="pt-6 pb-12 scroll-mt-24">
           <div className="container">
             {filteredReferences.length > 0 ? (
               <>

@@ -20,9 +20,9 @@ export const CTASection = () => {
         <div className="absolute top-0 right-0 w-full md:w-1/2 h-full bg-gradient-to-l from-[#10A37F]/10 to-transparent"></div>
         
         {/* Magical Stars */}
-        <StarSparkle className="absolute text-yellow-400 w-10 h-10 top-16 right-[38%] lg:right-[42%] animate-pulse" />
-        <StarSparkle className="absolute text-yellow-400 w-6 h-6 bottom-12 left-[55%] lg:left-[50%] animate-pulse delay-150" />
-        <StarSparkle className="absolute text-yellow-400 w-4 h-4 top-10 left-[60%] lg:left-[55%] animate-pulse delay-300 opacity-50" />
+        <StarSparkle className="hidden md:block absolute text-yellow-400 w-10 h-10 top-16 right-[38%] lg:right-[42%] animate-pulse" />
+        <StarSparkle className="hidden md:block absolute text-yellow-400 w-6 h-6 bottom-12 left-[55%] lg:left-[50%] animate-pulse delay-150" />
+        <StarSparkle className="hidden md:block absolute text-yellow-400 w-4 h-4 top-10 left-[60%] lg:left-[55%] animate-pulse delay-300 opacity-50" />
       </div>
       
       <div className="container max-w-7xl mx-auto px-4 md:px-6 py-16 md:py-24 relative flex flex-col md:flex-row items-center justify-between">

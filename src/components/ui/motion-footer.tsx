@@ -5,7 +5,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { cn } from "@/lib/utils";
-import { MessageCircle, Rocket } from "lucide-react";
+import { MessageCircle, Rocket, Instagram, Facebook } from "lucide-react";
 
 // Register ScrollTrigger safely for React
 if (typeof window !== "undefined") {
@@ -343,22 +343,44 @@ export function CinematicFooter() {
           </div>
 
           {/* 2.5 Footer Links & Contact */}
-          <div className="relative z-20 w-full pl-6 pr-24 md:pl-12 md:pr-32 flex flex-col md:flex-row justify-between items-start md:items-end mb-12 gap-8">
-            {/* Contact Section (Horizontal, like the right side) */}
-            <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 md:gap-6">
-              <a href="https://wa.me/6285312000446" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
-                <MessageCircle className="w-4 h-4 mr-2 shrink-0" />
-                +6285312000446
-              </a>
-              <span className="hidden sm:inline text-muted-foreground/30">•</span>
-              <a href="mailto:nitisaka.click@gmail.com" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
-                <svg className="w-4 h-4 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                nitisaka.click@gmail.com
-              </a>
-              <span className="hidden sm:inline text-muted-foreground/30">•</span>
-              <div className="flex items-center text-muted-foreground text-xs md:text-sm font-medium">
-                <svg className="w-4 h-4 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                Daerah Istimewa Yogyakarta
+          <div className="relative z-20 w-full pl-6 pr-24 md:pl-12 md:pr-32 flex flex-col lg:flex-row justify-between items-start lg:items-end mb-12 gap-8">
+            
+            {/* Left Column: Contact & Socials */}
+            <div className="flex flex-col gap-4 md:gap-5">
+              {/* Contact Section */}
+              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 md:gap-6">
+                <a href="https://wa.me/6285312000446" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
+                  <MessageCircle className="w-4 h-4 mr-2 shrink-0" />
+                  +6285312000446
+                </a>
+                <span className="hidden sm:inline text-muted-foreground/30">•</span>
+                <a href="mailto:nitisaka.click@gmail.com" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
+                  <svg className="w-4 h-4 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                  nitisakastudio@gmail.com
+                </a>
+                <span className="hidden sm:inline text-muted-foreground/30">•</span>
+                <div className="flex items-center text-muted-foreground text-xs md:text-sm font-medium">
+                  <svg className="w-4 h-4 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.242-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                  Daerah Istimewa Yogyakarta
+                </div>
+              </div>
+
+              {/* Social Links */}
+              <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 md:gap-6">
+                <a href="https://instagram.com/nitisakastudio" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
+                  <Instagram className="w-4 h-4 mr-2 shrink-0" />
+                  @nitisakastudio
+                </a>
+                <span className="hidden sm:inline text-muted-foreground/30">•</span>
+                <a href="https://facebook.com/nitisakastudio" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
+                  <Facebook className="w-4 h-4 mr-2 shrink-0" />
+                  @nitisakastudio
+                </a>
+                <span className="hidden sm:inline text-muted-foreground/30">•</span>
+                <a href="https://tiktok.com/@nitisakastudio" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
+                  <svg className="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-.9 4.45-2.43 6.08-1.5 1.58-3.6 2.5-5.78 2.62-2.3.13-4.66-.46-6.42-1.92-1.78-1.48-2.88-3.7-3.03-5.99-.17-2.61.9-5.26 2.85-6.99 1.69-1.49 4.02-2.2 6.22-1.98.02 1.34.01 2.68.01 4.02-1.15-.22-2.39-.06-3.37.58-.94.61-1.54 1.63-1.65 2.74-.11 1.11.27 2.25.99 3.05.7.77 1.8 1.19 2.87 1.17 1.16-.02 2.28-.56 2.97-1.45.61-.79.93-1.8.94-2.8V.02z" /></svg>
+                  @nitisakastudio
+                </a>
               </div>
             </div>
 
