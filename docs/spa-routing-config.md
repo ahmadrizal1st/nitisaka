@@ -120,7 +120,7 @@ alert_rules:
 http_port: 8080
 instance_count: 1
 instance_size_slug: basic-xxs
-name: forstbiz
+name: nitisaka
 region: singapore
 routes:
   - path: /

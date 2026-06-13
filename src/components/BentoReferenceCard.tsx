@@ -25,7 +25,7 @@ export const BentoReferenceCard = ({ reference, featured = false }: BentoReferen
     e.preventDefault();
     window.open(
       generateWhatsAppLink(
-        `Halo DevStudio, saya tertarik dengan desain seperti "${reference.title}" (${reference.category}). Bisa konsultasi lebih lanjut?`,
+        `Halo Nitisaka, saya tertarik dengan desain seperti "${reference.title}" (${reference.category}). Bisa konsultasi lebih lanjut?`,
       ),
       "_blank",
     );

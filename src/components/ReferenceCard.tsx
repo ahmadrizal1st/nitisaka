@@ -24,7 +24,7 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
   const handleWhatsApp = () => {
     window.open(
       generateWhatsAppLink(
-        `Halo DevStudio, saya tertarik dengan desain seperti "${reference.title}" (${reference.category}). Bisa konsultasi lebih lanjut?`,
+        `Halo Nitisaka, saya tertarik dengan desain seperti "${reference.title}" (${reference.category}). Bisa konsultasi lebih lanjut?`,
       ),
       "_blank",
     );

@@ -11,7 +11,7 @@ interface WhatsAppButtonProps {
 }
 
 export const WhatsAppButton = ({
-  message = "Halo DevStudio, saya tertarik dengan jasa pembuatan website.",
+  message = "Halo Nitisaka, saya tertarik dengan jasa pembuatan website.",
   size = "default",
   variant = "default",
   className = "",

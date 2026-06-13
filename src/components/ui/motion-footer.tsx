@@ -302,7 +302,7 @@ export function CinematicFooter() {
             ref={giantTextRef}
             className="footer-giant-bg-text absolute -bottom-[5vh] left-1/2 -translate-x-1/2 whitespace-nowrap z-0 pointer-events-none select-none"
           >
-            DEVSTUDIO
+            NITISAKA
           </div>
 
           {/* 1. Diagonal Sleek Marquee (Top of footer) */}
@@ -348,9 +348,9 @@ export function CinematicFooter() {
                 +6285312000446
               </a>
               <span className="hidden sm:inline text-muted-foreground/30">•</span>
-              <a href="mailto:devstudio.click@gmail.com" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
+              <a href="mailto:nitisaka.click@gmail.com" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
                 <svg className="w-4 h-4 mr-2 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                devstudio.click@gmail.com
+                nitisaka.click@gmail.com
               </a>
               <span className="hidden sm:inline text-muted-foreground/30">•</span>
               <div className="flex items-center text-muted-foreground text-xs md:text-sm font-medium">
@@ -380,7 +380,7 @@ export function CinematicFooter() {
             
             {/* Copyright */}
             <div className="text-muted-foreground text-[10px] md:text-xs font-bold tracking-widest uppercase order-2 md:order-1">
-              DEVSTUDIO. ALL RIGHTS RESERVED.
+              NITISAKA. ALL RIGHTS RESERVED.
             </div>
 
             {/* "Made with Love" Badge */}
@@ -388,7 +388,7 @@ export function CinematicFooter() {
               <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest">Crafted with</span>
               <span className="animate-footer-heartbeat text-sm md:text-base text-destructive">❤</span>
               <span className="text-muted-foreground text-[10px] md:text-xs font-bold uppercase tracking-widest">by</span>
-              <span className="text-foreground font-black text-xs md:text-sm tracking-normal ml-1">DevStudio</span>
+              <span className="text-foreground font-black text-xs md:text-sm tracking-normal ml-1">Nitisaka</span>
             </div>
 
             {/* Back to top */}

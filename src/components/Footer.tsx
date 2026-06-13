@@ -13,8 +13,8 @@ export const Footer = () => {
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-3 mb-6">
               <img
-                src="/logo-light.png"
-                alt="DevStudio Logo"
+                src="/dark/logo-text-nobg.png"
+                alt="Nitisaka Logo"
                 className="h-12 w-auto filter drop-shadow-md"
               />
             </div>
@@ -63,7 +63,7 @@ export const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href={generateWhatsAppLink("Halo DevStudio!")}
+                  href={generateWhatsAppLink("Halo Nitisaka!")}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground hover:text-primary transition-colors"
@@ -74,11 +74,11 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="mailto:info@DevStudio.com"
+                  href="mailto:info@Nitisaka.com"
                   className="flex items-center gap-2 text-muted-foreground hover:text-foreground hover:text-primary transition-colors"
                 >
                   <Mail className="h-4 w-4" />
-                  <span>devstudio.click@gmail.com</span>
+                  <span>nitisaka.click@gmail.com</span>
                 </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
@@ -91,7 +91,7 @@ export const Footer = () => {
 
         <div className="mt-8 border-t border-white/5 pt-8 text-center">
           <p className="text-muted-foreground">
-            © {currentYear} DevStudio. All rights reserved.
+            © {currentYear} Nitisaka. All rights reserved.
           </p>
         </div>
       </div>

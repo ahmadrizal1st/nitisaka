@@ -83,7 +83,7 @@ export const PackageCard = ({
 
       <div className="p-6 pt-0 mt-auto bg-muted/30 dark:bg-white/5 rounded-b-xl">
         <WhatsAppButton
-          message={`Halo DevStudio, saya tertarik dengan paket ${pkg.name} (${pkg.priceRange}). Bisa jelaskan lebih detail?`}
+          message={`Halo Nitisaka, saya tertarik dengan paket ${pkg.name} (${pkg.priceRange}). Bisa jelaskan lebih detail?`}
           className={`w-full h-11 ${pkg.popular ? '!bg-primary hover:!bg-primary/90 !text-white border-0' : '!bg-transparent border border-border hover:!bg-accent hover:!text-accent-foreground !text-foreground'}`}
         >
           Pilih Paket

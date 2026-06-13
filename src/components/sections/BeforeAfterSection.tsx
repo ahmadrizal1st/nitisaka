@@ -43,7 +43,7 @@ export const BeforeAfterSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6 }}
-            className="flex-1 w-full bg-red-50/50 dark:bg-red-950/20 rounded-[2rem] p-6 md:p-10 flex flex-col sm:flex-row gap-8 items-center shadow-lg shadow-red-100/20 dark:shadow-none"
+            className="flex-1 w-full bg-red-50/50 dark:bg-red-950/20 rounded-[2rem] p-6 md:p-10 flex flex-col sm:flex-row gap-8 items-center"
           >
             <div className="flex-1 w-full">
               <h4 className="text-red-600 dark:text-red-500 font-black tracking-widest text-sm mb-6 uppercase">
@@ -79,7 +79,7 @@ export const BeforeAfterSection = () => {
             whileInView={{ opacity: 1, scale: 1, x: "-50%", y: "-50%" }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.4, delay: 0.4 }}
-            className="hidden lg:flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground flex-shrink-0 z-10 shadow-xl shadow-primary/25 absolute top-1/2 left-1/2 border-4 border-background"
+            className="hidden lg:flex items-center justify-center w-16 h-16 rounded-full bg-primary text-primary-foreground flex-shrink-0 z-10 absolute top-1/2 left-1/2"
           >
             <ArrowRight className="w-6 h-6 stroke-[3]" />
           </motion.div>
@@ -90,7 +90,7 @@ export const BeforeAfterSection = () => {
             whileInView={{ opacity: 1, x: 0, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="flex-1 w-full bg-primary/5 dark:bg-primary/10 rounded-[2rem] p-6 md:p-10 flex flex-col sm:flex-row gap-8 items-center shadow-lg shadow-primary/5"
+            className="flex-1 w-full bg-primary/5 dark:bg-primary/10 rounded-[2rem] p-6 md:p-10 flex flex-col sm:flex-row gap-8 items-center"
           >
             <div className="flex-1 w-full">
               <h4 className="text-primary font-black tracking-widest text-sm mb-6 uppercase">

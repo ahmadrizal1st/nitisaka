@@ -283,7 +283,7 @@ const ReferenceDetailPage = () => {
                   )}
                   <div className="w-full">
                     <WhatsAppButton
-                      message={`Halo DevStudio, saya tertarik dengan desain seperti "${reference.title}" (${reference.category}). Bisa konsultasi lebih lanjut?`}
+                      message={`Halo Nitisaka, saya tertarik dengan desain seperti "${reference.title}" (${reference.category}). Bisa konsultasi lebih lanjut?`}
                       size="lg"
                       className="w-full"
                     >

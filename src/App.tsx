@@ -9,6 +9,7 @@ import ReferenceDetailPage from "./pages/ReferenceDetailPage";
 import NotFound from "./pages/NotFound";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { LayoutPreloader } from "@/components/ui/layout-preloader";
 
 const queryClient = new QueryClient();
 
@@ -16,17 +17,19 @@ const App = () => (
   <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/reference" element={<ReferencePage />} />
-            <Route path="/reference/:id" element={<ReferenceDetailPage />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        <LayoutPreloader>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/reference" element={<ReferencePage />} />
+              <Route path="/reference/:id" element={<ReferenceDetailPage />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </LayoutPreloader>
       </TooltipProvider>
     </QueryClientProvider>
   </ThemeProvider>

@@ -39,7 +39,7 @@ const addonPackages = [
       },
     ],
     waMessage:
-      "Halo DevStudio, saya tertarik dengan layanan Domain Custom. Mohon informasi lebih lanjut.",
+      "Halo Nitisaka, saya tertarik dengan layanan Domain Custom. Mohon informasi lebih lanjut.",
   },
   {
     icon: RefreshCw,
@@ -54,7 +54,7 @@ const addonPackages = [
       { name: "Domain Custom/Premium - 1 tahun", price: "Rp 150rb - Rp 800rb" },
     ],
     waMessage:
-      "Halo DevStudio, saya ingin perpanjangan domain. Mohon bantuan caranya.",
+      "Halo Nitisaka, saya ingin perpanjangan domain. Mohon bantuan caranya.",
   },
   {
     icon: Server,
@@ -68,7 +68,7 @@ const addonPackages = [
       { name: "Hosting 12 Bulan", price: "Rp 300rb" },
     ],
     waMessage:
-      "Halo DevStudio, saya ingin perpanjangan hosting. Mohon informasi paket yang tersedia.",
+      "Halo Nitisaka, saya ingin perpanjangan hosting. Mohon informasi paket yang tersedia.",
   },
   {
     icon: Tag,
@@ -103,7 +103,7 @@ const addonPackages = [
       },
     ],
     waMessage:
-      "Halo DevStudio, saya tertarik dengan paket Bundling Domain + Hosting. Mana yang cocok untuk saya?",
+      "Halo Nitisaka, saya tertarik dengan paket Bundling Domain + Hosting. Mana yang cocok untuk saya?",
   },
 ];
 

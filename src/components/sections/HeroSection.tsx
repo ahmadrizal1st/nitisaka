@@ -14,8 +14,8 @@ const EcommerceMockup = () => (
         <div className="h-3 w-3 rounded-full bg-green-500/80" />
       </div>
       <div className="flex-1 flex justify-center">
-        <img src="/logo-dark.png" alt="DevStudio Logo" className="h-4 w-auto block dark:hidden opacity-90" />
-        <img src="/logo-light.png" alt="DevStudio Logo" className="h-4 w-auto hidden dark:block opacity-90" />
+        <img src="/light/logo-text-nobg.png" alt="Nitisaka Logo" className="h-4 w-auto block dark:hidden opacity-90" />
+        <img src="/dark/logo-text-nobg.png" alt="Nitisaka Logo" className="h-4 w-auto hidden dark:block opacity-90" />
       </div>
       <div className="w-10"></div>
     </div>
@@ -90,8 +90,8 @@ const DashboardMockup = () => (
         <div className="h-3 w-3 rounded-full bg-green-500/80" />
       </div>
       <div className="flex-1 flex justify-center">
-        <img src="/logo-dark.png" alt="DevStudio Logo" className="h-4 w-auto block dark:hidden opacity-90" />
-        <img src="/logo-light.png" alt="DevStudio Logo" className="h-4 w-auto hidden dark:block opacity-90" />
+        <img src="/light/logo-text-nobg.png" alt="Nitisaka Logo" className="h-4 w-auto block dark:hidden opacity-90" />
+        <img src="/dark/logo-text-nobg.png" alt="Nitisaka Logo" className="h-4 w-auto hidden dark:block opacity-90" />
       </div>
       <div className="w-10"></div>
     </div>

@@ -138,8 +138,8 @@ export const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <img src="/logo-dark.png" alt="DevStudio Logo" className="h-14 w-auto block dark:hidden" />
-          <img src="/logo-light.png" alt="DevStudio Logo" className="h-14 w-auto hidden dark:block" />
+          <img src="/light/logo-text-nobg.png" alt="Nitisaka Logo" className="h-14 w-auto block dark:hidden" />
+          <img src="/dark/logo-text-nobg.png" alt="Nitisaka Logo" className="h-14 w-auto hidden dark:block" />
         </Link>
 
         {/* Desktop Navigation */}
