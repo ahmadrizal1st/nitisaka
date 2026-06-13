@@ -22,9 +22,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ReferenceCard } from "@/components/ReferenceCard";
 import {
@@ -119,9 +117,8 @@ const ReferenceDetailPage = () => {
 
   if (!reference) {
     return (
-      <div className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1 container py-20 text-center">
+      <>
+        <section className="container py-20 text-center">
           <h1 className="text-2xl font-bold text-foreground mb-4">
             Referensi tidak ditemukan
           </h1>
@@ -134,14 +131,13 @@ const ReferenceDetailPage = () => {
               Kembali ke Referensi
             </Button>
           </Link>
-        </main>
-        <Footer />
-      </div>
+        </section>
+      </>
     );
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
       {/* CSS for preview container to prevent sticky navbar overflow */}
       <style>{`
         .preview-container {
@@ -162,9 +158,8 @@ const ReferenceDetailPage = () => {
           top: 0 !important;
         }
       `}</style>
-      <Navbar />
 
-      <main className="flex-1">
+      <div>
         {/* Header */}
         <section className="bg-gradient-to-br from-primary/5 via-background to-accent/30 py-8">
           <div className="container">
@@ -523,11 +518,8 @@ const ReferenceDetailPage = () => {
             </div>
           </section>
         )}
-      </main>
-
-      <Footer />
-      <WhatsAppFloat />
-    </div>
+      </div>
+    </>
   );
 };
 

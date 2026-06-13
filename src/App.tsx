@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound";
 
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { LayoutPreloader } from "@/components/ui/layout-preloader";
+import { Layout } from "@/components/Layout";
 
 const queryClient = new QueryClient();
 
@@ -21,13 +22,15 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/reference" element={<ReferencePage />} />
-              <Route path="/reference/:id" element={<ReferenceDetailPage />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
+            <Layout>
+              <Routes>
+                <Route path="/" element={<Index />} />
+                <Route path="/reference" element={<ReferencePage />} />
+                <Route path="/reference/:id" element={<ReferenceDetailPage />} />
+                {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+                <Route path="*" element={<NotFound />} />
+              </Routes>
+            </Layout>
           </BrowserRouter>
         </LayoutPreloader>
       </TooltipProvider>

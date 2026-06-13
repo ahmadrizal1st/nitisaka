@@ -4,8 +4,6 @@ import { Search, ArrowLeft, Loader2, ChevronDown } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { ReferenceCard } from "@/components/ReferenceCard";
 import { getReferencesByCategory, categories } from "@/lib/data/references";
 
@@ -109,10 +107,7 @@ const ReferencePage = () => {
   }, [loading, hasMore, loadMore]);
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Navbar />
-
-      <main className="flex-1">
+    <>
         {/* Header */}
         <section className="bg-background pt-16 pb-6">
           <div className="container">
@@ -225,11 +220,7 @@ const ReferencePage = () => {
             )}
           </div>
         </section>
-      </main>
-
-      <Footer />
-      <WhatsAppFloat />
-    </div>
+    </>
   );
 };
 
