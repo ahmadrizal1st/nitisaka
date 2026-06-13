@@ -131,7 +131,7 @@ export const AddonPackagesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-[1400px] mx-auto">
+        <div className="flex flex-nowrap items-stretch md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 pb-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-auto max-w-[1400px]">
           {addonPackages.map((pkg, index) => (
             <motion.div
               key={index}
@@ -139,7 +139,7 @@ export const AddonPackagesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className="flex flex-col h-full bg-background/40 backdrop-blur-xl border border-border/60 hover:border-primary/40 rounded-3xl p-5 md:p-6 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden relative group"
+              className="w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center flex flex-col bg-background/40 backdrop-blur-xl border border-border/60 hover:border-primary/40 rounded-3xl p-5 md:p-6 hover:shadow-2xl hover:shadow-primary/5 transition-all duration-500 overflow-hidden relative group"
             >
               {/* Watermark Icon (Top Right) */}
               <div className="absolute -top-12 -right-12 w-48 h-48 bg-primary/15 rounded-full flex items-center justify-center pointer-events-none z-0 group-hover:scale-110 group-hover:bg-primary/25 transition-all duration-700">

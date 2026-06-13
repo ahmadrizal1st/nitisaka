@@ -48,11 +48,11 @@ export function Pricing({
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-3 sm:2 gap-4">
+      <div className="flex flex-nowrap items-stretch md:grid md:grid-cols-3 gap-4 pb-8 overflow-x-auto md:overflow-visible snap-x snap-mandatory scrollbar-hide -mx-4 px-4 md:mx-0 md:px-0">
         {plans.map((plan, index) => (
           <motion.div
             key={index}
-            initial={{ y: 50, opacity: 1 }}
+            initial={{ y: 50, opacity: 0 }}
             whileInView={
               isDesktop
                 ? {
@@ -61,7 +61,12 @@ export function Pricing({
                     x: index === 2 ? -30 : index === 0 ? 30 : 0,
                     scale: index === 0 || index === 2 ? 0.94 : 1.0,
                   }
-                : {}
+                : {
+                    y: 0,
+                    opacity: 1,
+                    x: 0,
+                    scale: 1,
+                  }
             }
             viewport={{ once: true }}
             transition={{
@@ -69,19 +74,19 @@ export function Pricing({
               type: "spring",
               stiffness: 100,
               damping: 30,
-              delay: 0.4,
+              delay: 0.1,
               opacity: { duration: 0.5 },
             }}
             className={cn(
-              `rounded-2xl border-[1px] p-6 bg-background text-center lg:flex lg:flex-col lg:justify-center relative`,
+              `w-[85vw] sm:w-[350px] md:w-auto shrink-0 snap-center rounded-2xl border-[1px] p-6 bg-background text-center lg:flex lg:flex-col lg:justify-center relative`,
               plan.isPopular ? "border-primary border-2 shadow-xl" : "border-border",
               "flex flex-col",
-              !plan.isPopular && "mt-5",
+              !plan.isPopular && "md:mt-5",
               index === 0 || index === 2
-                ? "z-0 transform translate-x-0 translate-y-0 -translate-z-[50px] rotate-y-[10deg]"
+                ? "md:z-0 md:transform md:translate-x-0 md:translate-y-0 md:-translate-z-[50px] md:rotate-y-[10deg]"
                 : "z-10",
-              index === 0 && "origin-right",
-              index === 2 && "origin-left"
+              index === 0 && "md:origin-right",
+              index === 2 && "md:origin-left"
             )}
           >
             {plan.isPopular && (
