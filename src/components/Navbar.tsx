@@ -217,13 +217,13 @@ export const Navbar = () => {
     <header className="sticky top-0 z-40 w-full border-b border-border/40 bg-background/80 backdrop-blur-md supports-[backdrop-filter]:bg-background/60 shadow-sm">
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center">
-          <img src="/light/logo-text-nobg.png" alt="Nitisaka Logo" className="h-14 w-auto block dark:hidden" />
-          <img src="/dark/logo-text-nobg.png" alt="Nitisaka Logo" className="h-14 w-auto hidden dark:block" />
+        <Link to="/" className="flex items-center shrink-0">
+          <img src="/light/logo-text-nobg.png" alt="Nitisaka Logo" className="h-12 md:h-14 w-auto object-contain shrink-0 block dark:hidden" />
+          <img src="/dark/logo-text-nobg.png" alt="Nitisaka Logo" className="h-12 md:h-14 w-auto object-contain shrink-0 hidden dark:block" />
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center flex-1 justify-center">
+        <div className="hidden lg:flex items-center flex-1 justify-center">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -303,13 +303,13 @@ export const Navbar = () => {
         </div>
 
         {/* Right Section (Theme & CTA) */}
-        <div className="hidden md:flex items-center gap-2">
+        <div className="hidden lg:flex items-center gap-2">
           <ThemeToggle />
           <WhatsAppButton size="sm">Konsultasi Gratis</WhatsAppButton>
         </div>
 
         {/* Mobile Header Elements */}
-        <div className="md:hidden flex items-center gap-2">
+        <div className="lg:hidden flex items-center gap-2">
           <ThemeToggle />
           <MobileNav handleLinkClick={handleLinkClick} />
         </div>

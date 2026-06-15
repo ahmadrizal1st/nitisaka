@@ -37,13 +37,13 @@ export const AboutSection = () => {
           </motion.div>
 
           {/* Right Column - Word Breakdown Cards */}
-          <div className="relative">
+          <div className="relative mt-12 lg:mt-0">
             {/* Background Illustration */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 flex items-center justify-center opacity-100 pointer-events-none">
+            <div className="absolute top-0 lg:top-1/4 left-1/2 -translate-x-1/2 w-full h-full z-0 flex items-start justify-center opacity-80 lg:opacity-100 pointer-events-none">
               <img 
                 src="/illustrations/nitisaka-about-mascot.png" 
                 alt="Nitisaka About Mascot" 
-                className="w-[150%] max-w-[150%] h-auto object-contain scale-125"
+                className="w-[120%] max-w-[120%] lg:w-[110%] lg:max-w-[110%] h-auto object-contain scale-110 -mt-12 md:-mt-16 lg:-mt-24"
               />
             </div>
 
@@ -52,10 +52,10 @@ export const AboutSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="space-y-6 relative z-10 mt-32 md:mt-48 lg:mt-64"
+              className="space-y-6 relative z-10 mt-40 md:mt-48 lg:mt-56"
             >
               {/* Card Niti */}
-              <div className="relative bg-card/80 backdrop-blur-md border border-border p-8 rounded-3xl shadow-sm transition-all duration-300">
+              <div className="relative bg-card/80 backdrop-blur-md border border-border p-8 rounded-3xl shadow-lg transition-all duration-300">
                 <div className="absolute top-0 right-0 -mt-4 -mr-4 bg-background p-2 rounded-full border border-border shadow-sm transition-transform duration-300">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center text-primary">
                     <Leaf className="w-6 h-6" />
@@ -68,7 +68,7 @@ export const AboutSection = () => {
               </div>
 
               {/* Card Saka */}
-              <div className="relative bg-card/80 backdrop-blur-md border border-border p-8 rounded-3xl shadow-sm transition-all duration-300 md:ml-12">
+              <div className="relative bg-card/80 backdrop-blur-md border border-border p-8 rounded-3xl shadow-lg transition-all duration-300 md:ml-12 lg:ml-20">
                 <div className="absolute top-0 right-0 -mt-4 -mr-4 bg-background p-2 rounded-full border border-border shadow-sm transition-transform duration-300">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center text-primary">
                     <Landmark className="w-6 h-6" />
