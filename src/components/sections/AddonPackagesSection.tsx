@@ -179,13 +179,13 @@ export const AddonPackagesSection = () => {
                               {section.items.map((item, i) => (
                                 <li
                                   key={i}
-                                  className="flex items-start justify-between text-xs bg-background/60 py-2 px-3 rounded-lg border border-border/40 gap-3 hover:bg-background transition-colors"
+                                  className="flex flex-wrap items-start justify-between text-xs bg-background/60 py-2 px-3 rounded-lg border border-border/40 gap-x-3 gap-y-1 hover:bg-background transition-colors"
                                 >
-                                  <div className="flex items-start gap-2 flex-1 min-w-0">
+                                  <div className="flex items-start gap-2 flex-1 min-w-[120px]">
                                     <CheckCircle2 className="h-3.5 w-3.5 text-primary flex-shrink-0 mt-0.5" />
-                                    <span className="text-foreground font-medium break-words leading-tight">{item.name}</span>
+                                    <span className="text-foreground font-medium leading-tight">{item.name}</span>
                                   </div>
-                                  <span className="font-bold text-foreground whitespace-nowrap flex-shrink-0 text-right mt-0.5">{item.price}</span>
+                                  <span className="font-bold text-foreground whitespace-nowrap flex-shrink-0 text-right ml-auto mt-0.5">{item.price}</span>
                                 </li>
                               ))}
                             </ul>
@@ -199,13 +199,13 @@ export const AddonPackagesSection = () => {
                     {pkg.options.map((option, idx) => (
                       <li
                         key={idx}
-                        className="flex items-start justify-between text-xs bg-background/60 py-2 px-3 rounded-lg border border-border/40 gap-3 hover:bg-background transition-colors"
+                        className="flex flex-wrap items-start justify-between text-xs bg-background/60 py-2 px-3 rounded-lg border border-border/40 gap-x-3 gap-y-1 hover:bg-background transition-colors"
                       >
-                        <div className="flex items-start gap-2 flex-1 min-w-0">
+                        <div className="flex items-start gap-2 flex-1 min-w-[120px]">
                           <CheckCircle2 className="h-3.5 w-3.5 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground font-medium break-words leading-tight">{option.name}</span>
+                          <span className="text-foreground font-medium leading-tight">{option.name}</span>
                         </div>
-                        <span className="font-bold text-foreground whitespace-nowrap flex-shrink-0 text-right mt-0.5">{option.price}</span>
+                        <span className="font-bold text-foreground whitespace-nowrap flex-shrink-0 text-right ml-auto mt-0.5">{option.price}</span>
                       </li>
                     ))}
                   </ul>
