@@ -15,7 +15,7 @@ export const AboutSection = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary mb-6">
-              SECTION FILOSOFI NITISAKA
+              ABOUT NITISAKA
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-6 leading-tight">
