@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://nitisaka.pages.dev/sitemap.xml
+Sitemap: https://nitisakastudio.com/sitemap.xml
