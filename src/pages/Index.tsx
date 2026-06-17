@@ -1,4 +1,5 @@
 
+import { Seo } from "@/components/Seo";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
 import { JourneySection } from "@/components/sections/JourneySection";
@@ -33,6 +34,10 @@ const Index = () => {
   }, [location]);
   return (
     <>
+      <Seo 
+        title="Nitisaka - Jasa Pembuatan Website Murah & Profesional" 
+        description="Jasa pembuatan website profesional dengan harga terjangkau mulai dari Rp 800.000. Tersedia untuk Landing page, company profile, toko online, dan custom system."
+      />
       <HeroSection />
         <AboutSection />
         <JourneySection />

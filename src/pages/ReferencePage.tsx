@@ -7,6 +7,8 @@ import { Navbar } from "@/components/Navbar";
 import { ReferenceCard } from "@/components/ReferenceCard";
 import { getReferencesByCategory, categories } from "@/lib/data/references";
 
+import { Seo } from "@/components/Seo";
+
 const ReferencePage = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const location = useLocation();
@@ -108,6 +110,11 @@ const ReferencePage = () => {
 
   return (
     <>
+        <Seo 
+          title="Referensi Website & Desain | Nitisaka" 
+          description="Jelajahi berbagai referensi desain website profesional. Temukan inspirasi untuk landing page, company profile, toko online, dan custom system Anda."
+          url="https://nitisakastudio.com/reference"
+        />
         {/* Header */}
         <section className="bg-background pt-16 pb-6">
           <div className="container">

@@ -32,6 +32,8 @@ import {
 } from "@/lib/data/references";
 import { useTheme } from "@/components/ThemeProvider";
 
+import { Seo } from "@/components/Seo";
+
 const ReferenceDetailPage = () => {
   const { id } = useParams<{ id: string }>();
   const reference = id ? getReferenceById(id) : undefined;
@@ -118,6 +120,7 @@ const ReferenceDetailPage = () => {
   if (!reference) {
     return (
       <>
+        <Seo title="Referensi Tidak Ditemukan | Nitisaka" description="Maaf, referensi yang Anda cari tidak tersedia." />
         <section className="container py-20 text-center">
           <h1 className="text-2xl font-bold text-foreground mb-4">
             Referensi tidak ditemukan
@@ -138,6 +141,12 @@ const ReferenceDetailPage = () => {
 
   return (
     <>
+      <Seo 
+        title={`${reference.title} - ${reference.category} | Nitisaka`} 
+        description={reference.description}
+        image={reference.image === "/placeholder-light.svg" ? undefined : `https://nitisakastudio.com${reference.image}`}
+        url={`https://nitisakastudio.com/reference/${reference.id}`}
+      />
       {/* CSS for preview container to prevent sticky navbar overflow */}
       <style>{`
         .preview-container {
