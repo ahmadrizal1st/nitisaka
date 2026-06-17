@@ -67,12 +67,26 @@ export const CTASection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="hidden md:block absolute bottom-0 right-0 z-10 w-72 lg:w-[24rem] xl:w-[28rem] h-[120%] lg:h-[135%] xl:h-[145%] pointer-events-none"
         >
-           <img 
-             src="/illustrations/wave-hands.png" 
-             alt="Digital Solution Saka" 
-             className="w-full h-full object-contain object-right-bottom drop-shadow-2xl opacity-0 transition-opacity duration-1000 relative z-20" 
-             onLoad={(e) => e.currentTarget.classList.remove('opacity-0')} 
-           />
+           <picture className="w-full h-full relative z-20">
+             <source
+               type="image/webp"
+               srcSet={`
+                 /illustrations/wave-hands-600w.webp 600w,
+                 /illustrations/wave-hands-800w.webp 800w,
+                 /illustrations/wave-hands.webp 759w
+               `}
+               sizes="(max-width: 600px) 600px, (max-width: 800px) 800px, 759px"
+             />
+             <img 
+               src="/illustrations/wave-hands.png" 
+               alt="Digital Solution Saka" 
+               width="759"
+               height="942"
+               decoding="async"
+               className="w-full h-full object-contain object-right-bottom drop-shadow-2xl opacity-0 transition-opacity duration-1000" 
+               onLoad={(e) => e.currentTarget.classList.remove('opacity-0')} 
+             />
+           </picture>
         </motion.div>
 
       </div>

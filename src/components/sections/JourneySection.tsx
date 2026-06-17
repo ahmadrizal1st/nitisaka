@@ -72,7 +72,26 @@ export const JourneySection = () => {
                 
                 {/* Illustration */}
                 <div className="w-full h-56 lg:h-64 mb-6 flex justify-center lg:justify-start items-end">
-                  <img src={step.image} alt={step.title} className="max-h-full object-contain drop-shadow-sm" />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet={`
+                        ${step.image.replace('.png', '-828w.webp')} 828w,
+                        ${step.image.replace('.png', '-1200w.webp')} 1200w,
+                        ${step.image.replace('.png', '.webp')} 1402w
+                      `}
+                      sizes="(max-width: 828px) 828px, (max-width: 1200px) 1200px, 1402px"
+                    />
+                    <img 
+                      src={step.image} 
+                      alt={step.title} 
+                      width="1402"
+                      height="1122"
+                      loading="lazy"
+                      decoding="async"
+                      className="max-h-full object-contain drop-shadow-sm w-auto" 
+                    />
+                  </picture>
                 </div>
 
                 {/* Timeline node */}

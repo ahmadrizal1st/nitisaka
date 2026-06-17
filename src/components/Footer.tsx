@@ -12,11 +12,18 @@ export const Footer = () => {
           {/* Brand */}
           <div className="flex flex-col items-center md:items-start text-center md:text-left">
             <div className="flex items-center gap-3 mb-6">
-              <img
-                src="/dark/logo-text-nobg.png"
-                alt="Nitisaka Logo"
-                className="h-12 w-auto filter drop-shadow-md"
-              />
+              <picture>
+                <source type="image/webp" srcSet="/dark/logo-text-nobg.webp" />
+                <img
+                  src="/dark/logo-text-nobg.png"
+                  alt="Nitisaka Logo"
+                  width="1594"
+                  height="618"
+                  loading="lazy"
+                  decoding="async"
+                  className="h-12 w-auto filter drop-shadow-md"
+                />
+              </picture>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-sm">
               Jasa pembuatan website profesional dengan harga terjangkau untuk bisnis Anda. Platform kolaborasi tangguh untuk tim modern.

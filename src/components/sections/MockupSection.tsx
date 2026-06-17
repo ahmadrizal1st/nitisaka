@@ -18,18 +18,49 @@ export const MockupSection = () => {
         }
       >
         <div className="w-full h-full flex items-center justify-center">
-          <img 
-            src="/illustrations/responsive-mockup-light.png" 
-            alt="Responsive Website Mockup Light" 
-            className="w-full h-full object-contain dark:hidden block rounded-2xl"
-            draggable={false}
-          />
-          <img 
-            src="/illustrations/responsive-mockup-dark.png" 
-            alt="Responsive Website Mockup Dark" 
-            className="w-full h-full object-contain hidden dark:block rounded-2xl"
-            draggable={false}
-          />
+          <picture className="w-full h-full dark:hidden block">
+            <source
+              type="image/webp"
+              srcSet={`
+                /illustrations/responsive-mockup-light-828w.webp 828w,
+                /illustrations/responsive-mockup-light-1200w.webp 1200w,
+                /illustrations/responsive-mockup-light-1600w.webp 1600w
+              `}
+              sizes="(max-width: 828px) 828px, (max-width: 1200px) 1200px, 1600px"
+            />
+            <img 
+              src="/illustrations/responsive-mockup-light.png" 
+              alt="Responsive Website Mockup Light" 
+              width="1600"
+              height="1067"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-contain rounded-2xl"
+              draggable={false}
+            />
+          </picture>
+          
+          <picture className="w-full h-full hidden dark:block">
+            <source
+              type="image/webp"
+              srcSet={`
+                /illustrations/responsive-mockup-dark-828w.webp 828w,
+                /illustrations/responsive-mockup-dark-1200w.webp 1200w,
+                /illustrations/responsive-mockup-dark-1600w.webp 1600w
+              `}
+              sizes="(max-width: 828px) 828px, (max-width: 1200px) 1200px, 1600px"
+            />
+            <img 
+              src="/illustrations/responsive-mockup-dark.png" 
+              alt="Responsive Website Mockup Dark" 
+              width="1600"
+              height="1067"
+              loading="lazy"
+              decoding="async"
+              className="w-full h-full object-contain rounded-2xl"
+              draggable={false}
+            />
+          </picture>
         </div>
       </ContainerScroll>
     </section>

@@ -40,11 +40,26 @@ export const AboutSection = () => {
           <div className="relative mt-12 lg:mt-0">
             {/* Background Illustration */}
             <div className="absolute top-0 lg:top-1/4 left-1/2 -translate-x-1/2 w-full h-full z-0 flex items-start justify-center opacity-80 lg:opacity-100 pointer-events-none">
-              <img 
-                src="/illustrations/nitisaka-about-mascot.png" 
-                alt="Nitisaka About Mascot" 
-                className="w-[120%] max-w-[120%] lg:w-[110%] lg:max-w-[110%] h-auto object-contain scale-110 -mt-12 md:-mt-16 lg:-mt-24"
-              />
+              <picture className="w-[120%] max-w-[120%] lg:w-[110%] lg:max-w-[110%] h-auto scale-110 -mt-12 md:-mt-16 lg:-mt-24">
+                <source
+                  type="image/webp"
+                  srcSet={`
+                    /illustrations/nitisaka-about-mascot-828w.webp 828w,
+                    /illustrations/nitisaka-about-mascot-1200w.webp 1200w,
+                    /illustrations/nitisaka-about-mascot-1536w.webp 1536w
+                  `}
+                  sizes="(max-width: 828px) 828px, (max-width: 1200px) 1200px, 1536px"
+                />
+                <img 
+                  src="/illustrations/nitisaka-about-mascot.png" 
+                  alt="Nitisaka About Mascot" 
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-contain"
+                />
+              </picture>
             </div>
 
             <motion.div 

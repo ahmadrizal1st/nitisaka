@@ -218,8 +218,11 @@ export const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center shrink-0">
-          <img src="/light/logo-text-nobg.png" alt="Nitisaka Logo" className="h-12 md:h-14 w-auto object-contain shrink-0 block dark:hidden" />
-          <img src="/dark/logo-text-nobg.png" alt="Nitisaka Logo" className="h-12 md:h-14 w-auto object-contain shrink-0 hidden dark:block" />
+          <img src="/light/logo-text-nobg.png" alt="Nitisaka Logo" width="1594" height="618" className="h-12 md:h-14 w-auto object-contain shrink-0 block dark:hidden" />
+          <picture className="hidden dark:block shrink-0">
+            <source type="image/webp" srcSet="/dark/logo-text-nobg.webp" />
+            <img src="/dark/logo-text-nobg.png" alt="Nitisaka Logo" width="1594" height="618" className="h-12 md:h-14 w-auto object-contain" />
+          </picture>
         </Link>
 
         {/* Desktop Navigation */}
