@@ -46,9 +46,9 @@ export const BeforeAfterSection = () => {
             className="flex-1 w-full bg-red-50/50 dark:bg-red-950/20 rounded-[2rem] p-6 md:p-10 flex flex-col sm:flex-row gap-8 items-center"
           >
             <div className="flex-1 w-full">
-              <h4 className="text-red-600 dark:text-red-500 font-black tracking-widest text-sm mb-6 uppercase">
+              <h3 className="text-red-600 dark:text-red-500 font-black tracking-widest text-sm mb-6 uppercase">
                 Sebelum
-              </h4>
+              </h3>
               <ul className="space-y-4">
                 {beforeItems.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">
@@ -93,9 +93,9 @@ export const BeforeAfterSection = () => {
             className="flex-1 w-full bg-primary/5 dark:bg-primary/10 rounded-[2rem] p-6 md:p-10 flex flex-col sm:flex-row gap-8 items-center"
           >
             <div className="flex-1 w-full">
-              <h4 className="text-primary font-black tracking-widest text-sm mb-6 uppercase">
+              <h3 className="text-primary font-black tracking-widest text-sm mb-6 uppercase">
                 Setelah
-              </h4>
+              </h3>
               <ul className="space-y-4">
                 {afterItems.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3">

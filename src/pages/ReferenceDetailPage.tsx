@@ -102,14 +102,21 @@ const ReferenceDetailPage = () => {
 
   // Scroll event listener
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const windowHeight = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const scrollTop = window.scrollY;
+          const windowHeight = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight;
 
-      // Trigger when user is 500px from bottom
-      if (scrollTop + windowHeight >= documentHeight - 500) {
-        loadMore();
+          // Trigger when user is 500px from bottom
+          if (scrollTop + windowHeight >= documentHeight - 500) {
+            loadMore();
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 

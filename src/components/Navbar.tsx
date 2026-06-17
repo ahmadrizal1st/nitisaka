@@ -218,11 +218,24 @@ export const Navbar = () => {
       <div className="container flex h-16 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center shrink-0">
-          <img src="/light/logo-text-nobg.png" alt="Nitisaka Logo" width="1594" height="618" className="h-12 md:h-14 w-auto object-contain shrink-0 block dark:hidden" />
-          <picture className="hidden dark:block shrink-0">
-            <source type="image/webp" srcSet="/dark/logo-text-nobg.webp" />
-            <img src="/dark/logo-text-nobg.png" alt="Nitisaka Logo" width="1594" height="618" className="h-12 md:h-14 w-auto object-contain" />
-          </picture>
+          <img 
+            src="/light/logo-text-nobg.webp" 
+            srcSet="/light/logo-text-nobg.webp 144w, /light/logo-text-nobg@2x.webp 288w"
+            sizes="144px"
+            alt="Nitisaka Logo" 
+            width="144" 
+            height="56" 
+            className="h-12 md:h-14 w-auto object-contain shrink-0 block dark:hidden" 
+          />
+          <img 
+            src="/dark/logo-text-nobg.webp" 
+            srcSet="/dark/logo-text-nobg.webp 144w, /dark/logo-text-nobg@2x.webp 288w"
+            sizes="144px"
+            alt="Nitisaka Logo" 
+            width="144" 
+            height="56" 
+            className="h-12 md:h-14 w-auto object-contain shrink-0 hidden dark:block" 
+          />
         </Link>
 
         {/* Desktop Navigation */}
@@ -336,7 +349,7 @@ function MobileNav({ handleLinkClick }: { handleLinkClick: (href: string) => voi
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button size="icon" variant="ghost" className="rounded-full">
+        <Button size="icon" variant="ghost" className="rounded-full" aria-label="Open mobile menu">
           <Menu className="size-5" />
         </Button>
       </SheetTrigger>

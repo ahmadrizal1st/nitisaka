@@ -32,37 +32,30 @@ export const ServicesSection = () => {
         >
             {/* Light Mode Illustration */}
             <img 
-               src="/illustrations/digital-solustion-light.png" 
+               src="/illustrations/digital-solustion-light.webp" 
+               srcSet="/illustrations/digital-solustion-light.webp 744w, /illustrations/digital-solustion-light@2x.webp 1488w"
+               sizes="(max-width: 768px) 100vw, 744px"
                alt="Solusi Digital Nitisaka" 
-               width="1536"
-               height="1024"
+               width="744"
+               height="496"
                loading="lazy"
                decoding="async"
                className="w-full h-auto object-contain dark:hidden drop-shadow-sm opacity-0 transition-opacity duration-1000"
                onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}
             />
             {/* Dark Mode Illustration */}
-            <picture className="hidden w-full h-auto dark:block">
-              <source
-                type="image/webp"
-                srcSet={`
-                  /illustrations/digital-solustion-dark-600w.webp 600w,
-                  /illustrations/digital-solustion-dark-1000w.webp 1000w,
-                  /illustrations/digital-solustion-dark.webp 1536w
-                `}
-                sizes="(max-width: 600px) 600px, (max-width: 1000px) 1000px, 1536px"
-              />
-              <img 
-                 src="/illustrations/digital-solustion-dark.png" 
-                 alt="Solusi Digital Nitisaka" 
-                 width="1536"
-                 height="1024"
-                 loading="lazy"
-                 decoding="async"
-                 className="w-full h-auto object-contain drop-shadow-sm opacity-0 transition-opacity duration-1000"
-                 onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}
-              />
-            </picture>
+            <img 
+               src="/illustrations/digital-solustion-dark.webp" 
+               srcSet="/illustrations/digital-solustion-dark.webp 744w, /illustrations/digital-solustion-dark@2x.webp 1488w"
+               sizes="(max-width: 768px) 100vw, 744px"
+               alt="Solusi Digital Nitisaka" 
+               width="744"
+               height="496"
+               loading="lazy"
+               decoding="async"
+               className="hidden w-full h-auto object-contain dark:block drop-shadow-sm opacity-0 transition-opacity duration-1000"
+               onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}
+            />
         </motion.div>
 
       </div>

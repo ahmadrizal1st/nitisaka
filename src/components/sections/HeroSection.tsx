@@ -116,7 +116,7 @@ const DashboardMockup = () => (
 
       {/* Main Content */}
       <div className="flex-1 p-8 bg-gradient-to-br from-transparent to-primary/5">
-        <h3 className="text-base font-medium mb-6 text-foreground">Overview</h3>
+        <div className="text-base font-medium mb-6 text-foreground">Overview</div>
         
         {/* Stats row */}
         <div className="grid grid-cols-3 gap-6 mb-10">
@@ -161,17 +161,23 @@ export const HeroSection = () => {
   const [scale, setScale] = useState(1);
 
   useEffect(() => {
+    let animationFrameId: number;
     const updateScale = () => {
       if (containerRef.current) {
-        const width = containerRef.current.offsetWidth;
-        const BASE_WIDTH = 1024;
-        setScale(width / BASE_WIDTH);
+        animationFrameId = requestAnimationFrame(() => {
+          const width = containerRef.current!.offsetWidth;
+          const BASE_WIDTH = 1024;
+          setScale(width / BASE_WIDTH);
+        });
       }
     };
     
     updateScale();
     window.addEventListener('resize', updateScale);
-    return () => window.removeEventListener('resize', updateScale);
+    return () => {
+      window.removeEventListener('resize', updateScale);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   useEffect(() => {
@@ -321,7 +327,7 @@ export const HeroSection = () => {
                 <div className="mb-4 h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   {feature.icon}
                 </div>
-                <h3 className="text-lg font-bold text-foreground mb-2">{feature.title}</h3>
+                <h2 className="text-lg font-bold text-foreground mb-2">{feature.title}</h2>
                 <p className="text-sm text-muted-foreground flex-1 leading-relaxed">{feature.desc}</p>
               </motion.div>
             ))}

@@ -148,21 +148,30 @@ const MagneticButton = React.forwardRef<HTMLElement, MagneticButtonProps>(
       if (!element) return;
 
       const ctx = gsap.context(() => {
+        let isRunning = false;
         const handleMouseMove = (e: MouseEvent) => {
-          const rect = element.getBoundingClientRect();
-          const h = rect.width / 2;
-          const w = rect.height / 2;
-          const x = e.clientX - rect.left - h;
-          const y = e.clientY - rect.top - w;
+          if (isRunning) return;
+          isRunning = true;
+          const clientX = e.clientX;
+          const clientY = e.clientY;
 
-          gsap.to(element, {
-            x: x * 0.4,
-            y: y * 0.4,
-            rotationX: -y * 0.15,
-            rotationY: x * 0.15,
-            scale: 1.05,
-            ease: "power2.out",
-            duration: 0.4,
+          requestAnimationFrame(() => {
+            const rect = element.getBoundingClientRect();
+            const h = rect.width / 2;
+            const w = rect.height / 2;
+            const x = clientX - rect.left - h;
+            const y = clientY - rect.top - w;
+
+            gsap.to(element, {
+              x: x * 0.4,
+              y: y * 0.4,
+              rotationX: -y * 0.15,
+              rotationY: x * 0.15,
+              scale: 1.05,
+              ease: "power2.out",
+              duration: 0.4,
+            });
+            isRunning = false;
           });
         };
 
@@ -386,15 +395,15 @@ export function CinematicFooter() {
 
             {/* Secondary Text Links (Moved from center) */}
             <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 md:gap-6">
-              <a href="#" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors">
+              <a href="/" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors">
                 Kebijakan Privasi
               </a>
               <span className="hidden sm:inline text-muted-foreground/30">•</span>
-              <a href="#" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors">
+              <a href="/" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors">
                 Syarat & Ketentuan
               </a>
               <span className="hidden sm:inline text-muted-foreground/30">•</span>
-              <a href="#" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors">
+              <a href="/" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors">
                 Bantuan
               </a>
             </div>
@@ -421,6 +430,7 @@ export function CinematicFooter() {
               as="button"
               onClick={scrollToTop}
               className="w-12 h-12 rounded-full footer-glass-pill flex items-center justify-center text-muted-foreground hover:text-foreground group order-3"
+              aria-label="Back to top"
             >
               <svg className="w-5 h-5 transform group-hover:-translate-y-1.5 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
