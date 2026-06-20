@@ -11,43 +11,427 @@
   </url>
 
   <url>
-    <loc>https://nitisakastudio.com/#layanan</loc>
-    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/#layanan"/>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://nitisakastudio.com/#paket</loc>
-    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/#paket"/>
+    <loc>https://nitisakastudio.com/reference</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://nitisakastudio.com/#referensi</loc>
-    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/#referensi"/>
-    <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://nitisakastudio.com/#kenapa-kami</loc>
-    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/#kenapa-kami"/>
+    <loc>https://nitisakastudio.com/reference/klinik-kecantikan-aurora</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/klinik-kecantikan-aurora"/>
     <lastmod>2026-06-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://nitisakastudio.com/reference</loc>
-    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference"/>
+    <loc>https://nitisakastudio.com/reference/kursus-online-masterclass</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/kursus-online-masterclass"/>
     <lastmod>2026-06-20</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/catering-sehat-nutribox</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/catering-sehat-nutribox"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/event-organizer-sparkle</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/event-organizer-sparkle"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/pt-konstruksi-mandiri</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/pt-konstruksi-mandiri"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/firma-hukum-adil-sejahtera</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/firma-hukum-adil-sejahtera"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/klinik-gigi-smilecenter</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/klinik-gigi-smilecenter"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/yayasan-peduli-anak</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/yayasan-peduli-anak"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/batik-nusantara-collection</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/batik-nusantara-collection"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/bengkel-mobil-autocare</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/bengkel-mobil-autocare"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/studio-foto-moment</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/studio-foto-moment"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/kopi-nusantara-roastery</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/kopi-nusantara-roastery"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/fashion-store-trendy</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/fashion-store-trendy"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/elektronik-jaya-store</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/elektronik-jaya-store"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/herbal-alami-store</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/herbal-alami-store"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/buku-pintar-store</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/buku-pintar-store"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/sistem-inventaris-gudang</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/sistem-inventaris-gudang"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/aplikasi-reservasi-restoran</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/aplikasi-reservasi-restoran"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/portal-karyawan-hrd</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/portal-karyawan-hrd"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/sistem-booking-lapangan</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/sistem-booking-lapangan"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/e-learning-platform</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/e-learning-platform"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/aplikasi-koperasi</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/aplikasi-koperasi"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/travel-agency-paradise</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/travel-agency-paradise"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/gym-fitness-center</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/gym-fitness-center"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/klinik-spesialis-jantung</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/klinik-spesialis-jantung"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/sekolah-internasional-bright</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/sekolah-internasional-bright"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/per-businesses-real-estate-properti</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/per-businesses-real-estate-properti"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/wisata-bahari-dive-center</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/wisata-bahari-dive-center"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/paket-honeymoon-bali</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/paket-honeymoon-bali"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/pendakian-gunung-merapi</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/pendakian-gunung-merapi"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/wisata-halal-indonesia</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/wisata-halal-indonesia"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/jakarta-city-tour</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/jakarta-city-tour"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/kerajinan-kayu-jati</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/kerajinan-kayu-jati"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/laundry-kiloan</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/laundry-kiloan"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/petshop-hewan</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/petshop-hewan"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/jasa-arsitektur-interior</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/jasa-arsitektur-interior"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/rental-mobil</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/rental-mobil"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/tas-kulit-premium</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/tas-kulit-premium"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/aksesoris-motor</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/aksesoris-motor"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/tanaman-hias-indoor</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/tanaman-hias-indoor"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/kue-tradisional-online</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/kue-tradisional-online"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/sepatu-sneakers-original</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/sepatu-sneakers-original"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/sistem-kasir-restoran</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/sistem-kasir-restoran"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/sistem-pendaftaran-pasien</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/sistem-pendaftaran-pasien"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/sistem-parkir-otomatis</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/sistem-parkir-otomatis"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/platform-freelance-marketplace</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/platform-freelance-marketplace"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/sistem-laundry-manajemen</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/sistem-laundry-manajemen"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/podcast-network-indonesia</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/podcast-network-indonesia"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/aplikasi-fintech-investasi</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/aplikasi-fintech-investasi"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/dental-clinic-premium</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/dental-clinic-premium"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/coworking-space-urban</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/coworking-space-urban"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference/brand-fashion-lokal</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference/brand-fashion-lokal"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
 </urlset>
