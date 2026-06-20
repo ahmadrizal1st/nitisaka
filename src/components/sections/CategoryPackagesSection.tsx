@@ -73,7 +73,9 @@ export const CategoryPackagesSection = () => {
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
+                  id={`tab-${category.id}`}
                   aria-label={category.name}
+                  aria-controls={`panel-${category.id}`}
                   className="flex-shrink-0 flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-4 py-2 rounded-lg border whitespace-nowrap"
                 >
                   {Icon && <Icon className="h-4 w-4" />}
@@ -96,7 +98,7 @@ export const CategoryPackagesSection = () => {
             }));
 
             return (
-              <TabsContent key={category.id} value={category.id} id={category.id} className="mt-0 pt-16 -mt-16">
+              <TabsContent key={category.id} value={category.id} id={`panel-${category.id}`} className="mt-0 pt-16 -mt-16">
                 <div className="text-center mb-8">
                   <h3 className="text-2xl lg:text-3xl font-extrabold text-foreground tracking-tight">
                     {category.name}
