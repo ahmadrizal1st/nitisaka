@@ -244,6 +244,7 @@ export const Navbar = () => {
             <NavigationMenuList>
               <NavigationMenuItem>
                 <NavigationMenuLink 
+                  href="/"
                   onClick={() => handleLinkClick("/")}
                   className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent"
                 >
@@ -253,6 +254,7 @@ export const Navbar = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink 
+                  href="/#about"
                   onClick={() => handleLinkClick("/#about")}
                   className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent"
                 >
@@ -262,6 +264,7 @@ export const Navbar = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink 
+                  href="/#layanan"
                   onClick={() => handleLinkClick("/#layanan")}
                   className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent"
                 >
@@ -308,6 +311,7 @@ export const Navbar = () => {
 
               <NavigationMenuItem>
                 <NavigationMenuLink 
+                  href="/#kenapa-kami"
                   onClick={() => handleLinkClick("/#kenapa-kami")}
                   className="group inline-flex h-9 w-max items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 cursor-pointer bg-transparent"
                 >

@@ -1,11 +1,18 @@
 import { Helmet } from "react-helmet-async";
 
+interface BreadcrumbItem {
+  name: string;
+  url: string;
+}
+
 interface SeoProps {
   title: string;
   description: string;
   image?: string;
   url?: string;
   type?: string;
+  breadcrumbs?: BreadcrumbItem[];
+  jsonLd?: object;
 }
 
 export const Seo = ({ 
@@ -13,8 +20,21 @@ export const Seo = ({
   description, 
   image = "https://nitisakastudio.com/illustrations/responsive-mockup-light.png", 
   url = "https://nitisakastudio.com",
-  type = "website" 
+  type = "website",
+  breadcrumbs,
+  jsonLd,
 }: SeoProps) => {
+  const breadcrumbSchema = breadcrumbs ? {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": breadcrumbs.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "item": item.url,
+    })),
+  } : null;
+
   return (
     <Helmet>
       {/* Standard Meta Tags */}
@@ -35,6 +55,20 @@ export const Seo = ({
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+
+      {/* Breadcrumb Schema */}
+      {breadcrumbSchema && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      )}
+
+      {/* Custom JSON-LD */}
+      {jsonLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+      )}
     </Helmet>
   );
 };

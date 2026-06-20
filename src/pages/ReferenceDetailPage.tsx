@@ -153,6 +153,34 @@ const ReferenceDetailPage = () => {
         description={reference.description}
         image={reference.image === "/placeholder-light.svg" ? undefined : `https://nitisakastudio.com${reference.image}`}
         url={`https://nitisakastudio.com/reference/${reference.slug}`}
+        breadcrumbs={[
+          { name: "Beranda", url: "https://nitisakastudio.com/" },
+          { name: "Referensi", url: "https://nitisakastudio.com/reference" },
+          { name: reference.title, url: `https://nitisakastudio.com/reference/${reference.slug}` },
+        ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "WebPage",
+          "name": `Desain Website ${reference.title}`,
+          "description": reference.description,
+          "url": `https://nitisakastudio.com/reference/${reference.slug}`,
+          "inLanguage": "id-ID",
+          "isPartOf": {
+            "@type": "WebSite",
+            "name": "Nitisaka Studio",
+            "url": "https://nitisakastudio.com"
+          },
+          "primaryImageOfPage": reference.image !== "/placeholder-light.svg" ? {
+            "@type": "ImageObject",
+            "url": `https://nitisakastudio.com${reference.image}`,
+            "name": `Desain Website ${reference.title} - Jasa Pembuatan Website ${reference.category} Nitisaka`,
+          } : undefined,
+          "author": {
+            "@type": "Organization",
+            "name": "Nitisaka Studio",
+            "url": "https://nitisakastudio.com"
+          }
+        }}
       />
       {/* CSS for preview container to prevent sticky navbar overflow */}
       <style>{`
@@ -179,13 +207,26 @@ const ReferenceDetailPage = () => {
         {/* Header */}
         <section className="bg-gradient-to-br from-primary/5 via-background to-accent/30 py-8">
           <div className="container">
-            <Link
-              to="/reference"
-              className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Kembali ke Referensi
-            </Link>
+            {/* Breadcrumb Navigation */}
+            <nav aria-label="Breadcrumb">
+              <ol className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
+                <li>
+                  <Link to="/" className="hover:text-foreground transition-colors">
+                    Beranda
+                  </Link>
+                </li>
+                <li aria-hidden="true"><span className="text-muted-foreground/40">/</span></li>
+                <li>
+                  <Link to="/reference" className="hover:text-foreground transition-colors">
+                    Referensi
+                  </Link>
+                </li>
+                <li aria-hidden="true"><span className="text-muted-foreground/40">/</span></li>
+                <li className="text-foreground font-medium truncate max-w-[200px] sm:max-w-xs">
+                  {reference.title}
+                </li>
+              </ol>
+            </nav>
           </div>
         </section>
 

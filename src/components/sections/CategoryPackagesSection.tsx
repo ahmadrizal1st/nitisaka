@@ -73,6 +73,7 @@ export const CategoryPackagesSection = () => {
                 <TabsTrigger
                   key={category.id}
                   value={category.id}
+                  aria-label={category.name}
                   className="flex-shrink-0 flex items-center gap-2 data-[state=active]:bg-primary data-[state=active]:text-primary-foreground px-4 py-2 rounded-lg border whitespace-nowrap"
                 >
                   {Icon && <Icon className="h-4 w-4" />}

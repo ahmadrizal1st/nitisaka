@@ -58,3 +58,12 @@ Meningkatkan visibilitas website di Google.
 - Email: nitisakastudio@gmail.com
 - Lokasi: Daerah Istimewa Yogyakarta
 - Instagram: @nitisakastudio
+
+## Tautan Penting
+- [Website Utama](https://nitisakastudio.com/)
+- [Portofolio / Referensi](https://nitisakastudio.com/reference)
+- [Referensi Landing Page](https://nitisakastudio.com/reference?category=landing-page)
+- [Referensi Company Profile](https://nitisakastudio.com/reference?category=company-profile)
+- [Referensi Toko Online](https://nitisakastudio.com/reference?category=toko-online)
+- [Referensi Custom System](https://nitisakastudio.com/reference?category=custom-system)
+- [Konsultasi WhatsApp](https://wa.me/6285312000446)

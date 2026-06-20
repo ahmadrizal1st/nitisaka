@@ -130,8 +130,9 @@ export const WhyUsSection = () => {
             className="hidden lg:flex w-72 h-72 md:w-96 md:h-96 lg:w-[24rem] lg:h-[24rem] xl:w-[28rem] xl:h-[28rem] shrink-0 relative z-20 items-center justify-center my-8 lg:my-0 lg:mx-8 pointer-events-none"
           >
              <img 
-               src="/illustrations/growth-partner.png" 
+               src="/illustrations/growth-partner.webp" 
                alt="Growth Partner Nitisaka" 
+               width="448" height="448"
                className="w-full h-full object-contain relative z-10 drop-shadow-2xl opacity-0 transition-opacity duration-1000 scale-110 lg:scale-125" 
                onLoad={(e) => e.currentTarget.classList.remove('opacity-0')}
              />
