@@ -39,8 +39,8 @@ export function LayoutPreloader({ children }: { children: React.ReactNode }) {
               className="relative z-10 flex flex-col items-center"
             >
               {/* Using the new text-nobg logos */}
-              <img src="/light/logo-text-nobg.webp" alt="Nitisaka" className="h-14 w-auto block dark:hidden" width="212" height="56" />
-              <img src="/dark/logo-text-nobg.webp" alt="Nitisaka" className="h-14 w-auto hidden dark:block" width="212" height="56" />
+              <img src="/light/logo-text-nobg.webp" alt="Nitisaka" className="h-14 w-auto block dark:hidden" width="142" height="56" />
+              <img src="/dark/logo-text-nobg.webp" alt="Nitisaka" className="h-14 w-auto hidden dark:block" width="142" height="56" />
               
               <div className="mt-8 flex items-center gap-2">
                 {[0, 1, 2].map((i) => (
