@@ -20,6 +20,7 @@ export const Seo = ({
       {/* Standard Meta Tags */}
       <title>{title}</title>
       <meta name="description" content={description} />
+      <link rel="canonical" href={url} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={type} />
