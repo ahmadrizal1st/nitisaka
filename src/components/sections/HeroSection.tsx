@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ArrowRight, Code, Zap, ShoppingBag, Search, Monitor, LayoutDashboard, Users, Shield, Layers } from "lucide-react";
 import { GlowyWavesHero } from "@/components/ui/glowy-waves-hero-shadcnui";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
@@ -192,11 +191,8 @@ export const HeroSection = () => {
       <div className="container relative z-10 mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           {/* Top Content */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-12"
+          <div 
+            className="text-center max-w-3xl mx-auto mb-12 animate-in fade-in slide-in-from-bottom-8 duration-700 fill-mode-both"
           >
             <p className="text-primary text-[10px] sm:text-xs font-bold tracking-[0.15em] uppercase mb-6">
               Step by step, build your future.
@@ -208,14 +204,11 @@ export const HeroSection = () => {
               <span className="text-primary">Website & Software</span><br className="hidden sm:block" />
               yang Tepat.
             </h1>
-          </motion.div>
+          </div>
 
           {/* Illustration - Animated Mockups */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.95, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative mx-auto w-full max-w-5xl mb-12 group"
+          <div 
+            className="relative mx-auto w-full max-w-5xl mb-12 group animate-in fade-in zoom-in-95 slide-in-from-bottom-8 duration-700 delay-200 fill-mode-both"
           >
             <div 
               ref={containerRef}
@@ -267,14 +260,11 @@ export const HeroSection = () => {
                 <LayoutDashboard className="h-4 w-4" />
               </button>
             </div>
-          </motion.div>
+          </div>
 
           {/* Bottom Content */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center max-w-2xl mx-auto mt-4 mb-20 lg:mb-24"
+          <div 
+            className="text-center max-w-2xl mx-auto mt-4 mb-20 lg:mb-24 animate-in fade-in slide-in-from-bottom-8 duration-700 delay-500 fill-mode-both"
           >
             <p className="text-lg text-muted-foreground mb-8">
               Solusi digital yang dirancang untuk meningkatkan kredibilitas, mengotomasi operasional, dan mendorong pertumbuhan bisnis Anda.
@@ -291,7 +281,7 @@ export const HeroSection = () => {
                 Lihat Portofolio
               </a>
             </div>
-          </motion.div>
+          </div>
 
           {/* 4 Column Features - Moved from MockupSection to naturally sit at the bottom of Hero */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto relative z-30">
@@ -317,19 +307,17 @@ export const HeroSection = () => {
                 desc: "Tim support kami selalu siap membantu setiap kendala teknis yang Anda alami."
               }
             ].map((feature, idx) => (
-              <motion.div 
+              <div 
                 key={idx} 
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 + idx * 0.1 }}
-                className="bg-card p-6 rounded-xl border border-border shadow-sm flex flex-col h-full relative z-10"
+                className="bg-card p-6 rounded-xl border border-border shadow-sm flex flex-col h-full relative z-10 animate-in fade-in slide-in-from-bottom-8 duration-500 fill-mode-both"
+                style={{ animationDelay: `${600 + idx * 100}ms` }}
               >
                 <div className="mb-4 h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
                   {feature.icon}
                 </div>
                 <h2 className="text-lg font-bold text-foreground mb-2">{feature.title}</h2>
                 <p className="text-sm text-muted-foreground flex-1 leading-relaxed">{feature.desc}</p>
-              </motion.div>
+              </div>
             ))}
           </div>
 

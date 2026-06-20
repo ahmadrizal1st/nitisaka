@@ -1,6 +1,5 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 type Point = {
@@ -136,10 +135,12 @@ export function GlowyWavesHero({ children, className = "" }: { children?: React.
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)"
     ).matches;
+    const isMobile = window.innerWidth < 768;
 
     const mouseInfluence = prefersReducedMotion ? 10 : 70;
     const influenceRadius = prefersReducedMotion ? 160 : 320;
     const smoothing = prefersReducedMotion ? 0.04 : 0.1;
+    const step = isMobile ? 16 : 4;
 
     const resizeCanvas = () => {
       canvas.width = window.innerWidth;
@@ -176,7 +177,7 @@ export function GlowyWavesHero({ children, className = "" }: { children?: React.
       ctx.save();
       ctx.beginPath();
 
-      for (let x = 0; x <= canvas.width; x += 4) {
+      for (let x = 0; x <= canvas.width; x += step) {
         const dx = x - mouseRef.current.x;
         const dy = canvas.height / 2 - mouseRef.current.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
@@ -224,7 +225,11 @@ export function GlowyWavesHero({ children, className = "" }: { children?: React.
       ctx.globalAlpha = 1;
       ctx.shadowBlur = 0;
 
-      themeColors.wavePalette.forEach(drawWave);
+      const activeWaves = isMobile 
+        ? themeColors.wavePalette.slice(0, 3) 
+        : themeColors.wavePalette;
+        
+      activeWaves.forEach(drawWave);
 
       animationId = window.requestAnimationFrame(animate);
     };
