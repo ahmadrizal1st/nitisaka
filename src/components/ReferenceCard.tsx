@@ -36,7 +36,7 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
       <div className="relative aspect-video overflow-hidden bg-muted">
         <img
           src={displayImage}
-          alt={reference.title}
+          alt={`Desain Website ${reference.title} - Jasa Pembuatan Website ${reference.category} Nitisaka`}
           onError={(e) => {
             e.currentTarget.src = currentTheme === "dark" ? "/placeholder-dark.svg" : "/placeholder-light.svg";
           }}
@@ -48,7 +48,7 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
 
         {/* Overlay buttons */}
         <div className="absolute inset-0 flex items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Link to={`/reference/${reference.id}`}>
+          <Link to={`/reference/${reference.slug}`}>
             <Button size="sm" variant="secondary" className="shadow-lg">
               <Eye className="mr-1 h-4 w-4" />
               Detail
@@ -78,8 +78,8 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
       </CardContent>
 
       <CardFooter className="p-4 pt-0 flex gap-2">
-        <Link to={`/reference/${reference.id}`} className="flex-1">
-          <Button variant="outline" size="sm" className="w-full">
+        <Link to={`/reference/${reference.slug}`} className="flex-1">
+          <Button variant="outline" size="sm" className="w-full min-h-[44px] md:min-h-0">
             <Eye className="mr-1 h-4 w-4" />
             Lihat Detail
           </Button>
@@ -87,7 +87,8 @@ export const ReferenceCard = ({ reference }: ReferenceCardProps) => {
         <Button
           size="sm"
           onClick={handleWhatsApp}
-          className="bg-whatsapp hover:bg-whatsapp/90"
+          className="bg-whatsapp hover:bg-whatsapp/90 min-h-[44px] min-w-[44px] md:min-h-0 md:min-w-0"
+          aria-label="Chat WhatsApp untuk Desain Ini"
         >
           <MessageCircle className="h-4 w-4" />
         </Button>

@@ -26,7 +26,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ReferenceCard } from "@/components/ReferenceCard";
 import {
-  getReferenceById,
+  getReferenceBySlug,
   getReferencesByCategory,
   Reference,
 } from "@/lib/data/references";
@@ -35,8 +35,8 @@ import { useTheme } from "@/components/ThemeProvider";
 import { Seo } from "@/components/Seo";
 
 const ReferenceDetailPage = () => {
-  const { id } = useParams<{ id: string }>();
-  const reference = id ? getReferenceById(id) : undefined;
+  const { slug } = useParams<{ slug: string }>();
+  const reference = slug ? getReferenceBySlug(slug) : undefined;
   const [previewMode, setPreviewMode] = useState<
     "desktop" | "tablet" | "mobile"
   >("desktop");
@@ -149,10 +149,10 @@ const ReferenceDetailPage = () => {
   return (
     <>
       <Seo 
-        title={`${reference.title} - ${reference.category} | Nitisaka`} 
+        title={`Desain Website ${reference.title} | Jasa Pembuatan Website ${reference.category}`} 
         description={reference.description}
         image={reference.image === "/placeholder-light.svg" ? undefined : `https://nitisakastudio.com${reference.image}`}
-        url={`https://nitisakastudio.com/reference/${reference.id}`}
+        url={`https://nitisakastudio.com/reference/${reference.slug}`}
       />
       {/* CSS for preview container to prevent sticky navbar overflow */}
       <style>{`
@@ -199,7 +199,7 @@ const ReferenceDetailPage = () => {
                   <div className="relative aspect-video rounded-xl overflow-hidden bg-muted border shadow-lg cursor-pointer group">
                     <img
                       src={displayImage}
-                      alt={reference.title}
+                      alt={`Desain Website ${reference.title} - Jasa Pembuatan Website ${reference.category} Nitisaka`}
                       onError={(e) => {
                         e.currentTarget.src = currentTheme === "dark" ? "/placeholder-dark.svg" : "/placeholder-light.svg";
                       }}
@@ -217,7 +217,7 @@ const ReferenceDetailPage = () => {
                   <div className="relative rounded-lg overflow-hidden flex justify-center items-center">
                     <img
                       src={displayImage}
-                      alt={reference.title}
+                      alt={`Desain Website ${reference.title} - Jasa Pembuatan Website ${reference.category} Nitisaka`}
                       onError={(e) => {
                         e.currentTarget.src = currentTheme === "dark" ? "/placeholder-dark.svg" : "/placeholder-light.svg";
                       }}

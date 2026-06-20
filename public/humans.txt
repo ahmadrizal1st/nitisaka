@@ -1,0 +1,14 @@
+/* TEAM */
+Developer: Nitisaka Studio
+Contact: nitisakastudio@gmail.com
+WhatsApp: +6285312000446
+Instagram: @nitisakastudio
+Location: Daerah Istimewa Yogyakarta, Indonesia
+
+/* SITE */
+Last update: 2026/06
+Language: Indonesian
+Doctype: HTML5
+IDE: Visual Studio Code
+Standards: HTML5, CSS3, TypeScript
+Components: React, Astro, TailwindCSS

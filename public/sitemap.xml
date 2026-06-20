@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://nitisakastudio.com/</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/#layanan</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/#layanan"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/#paket</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/#paket"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/#referensi</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/#referensi"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/#kenapa-kami</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/#kenapa-kami"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://nitisakastudio.com/reference</loc>
+    <xhtml:link rel="alternate" hreflang="id" href="https://nitisakastudio.com/reference"/>
+    <lastmod>2026-06-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>

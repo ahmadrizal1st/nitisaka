@@ -1,0 +1,5 @@
+Contact: mailto:nitisakastudio@gmail.com
+Contact: https://wa.me/6285312000446
+Preferred-Languages: id, en
+Canonical: https://nitisakastudio.com/.well-known/security.txt
+Expires: 2027-01-01T00:00:00.000Z

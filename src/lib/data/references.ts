@@ -3,6 +3,7 @@ export interface Reference {
   title: string;
   category: string;
   categoryId: string;
+  slug: string;
   description: string;
   features: string[];
   image: string;
@@ -18,8 +19,8 @@ export const references: Reference[] = [
     title: "Klinik Kecantikan Aurora",
     category: "Landing Page",
     categoryId: "landing-page",
-    description:
-      "Landing page elegan untuk klinik kecantikan dengan fokus pada layanan treatment dan booking online.",
+    slug: "klinik-kecantikan-aurora",
+    description: "Landing page elegan untuk klinik kecantikan dengan fokus pada layanan treatment dan booking online. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Hero dengan CTA booking",
       "Galeri treatment",
@@ -27,7 +28,7 @@ export const references: Reference[] = [
       "Form konsultasi",
       "WhatsApp floating",
     ],
-    image: "/references/klinik-kecantikan-aurora.png",
+    image: "/references/klinik-kecantikan-aurora.webp",
     suggestedPackage: "Landing Page Business",
   },
   {
@@ -35,8 +36,8 @@ export const references: Reference[] = [
     title: "Kursus Online MasterClass",
     category: "Landing Page",
     categoryId: "landing-page",
-    description:
-      "Landing page konversi tinggi untuk platform kursus online dengan penekanan pada benefit dan testimoni.",
+    slug: "kursus-online-masterclass",
+    description: "Landing page konversi tinggi untuk platform kursus online dengan penekanan pada benefit dan testimoni. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Video hero",
       "Benefit section",
@@ -44,7 +45,7 @@ export const references: Reference[] = [
       "FAQ accordion",
       "Countdown timer",
     ],
-    image: "/references/kursus-online-masterclass.png",
+    image: "/references/kursus-online-masterclass.webp",
     suggestedPackage: "Landing Page Pro",
   },
   {
@@ -52,8 +53,8 @@ export const references: Reference[] = [
     title: "Catering Sehat NutriBox",
     category: "Landing Page",
     categoryId: "landing-page",
-    description:
-      "Landing page untuk layanan catering sehat dengan menu mingguan dan sistem order via WhatsApp.",
+    slug: "catering-sehat-nutribox",
+    description: "Landing page untuk layanan catering sehat dengan menu mingguan dan sistem order via WhatsApp. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Menu carousel",
       "Paket langganan",
@@ -61,7 +62,7 @@ export const references: Reference[] = [
       "Area delivery",
       "WhatsApp order",
     ],
-    image: "/references/catering-sehat-nutribox.png",
+    image: "/references/catering-sehat-nutribox.webp",
     suggestedPackage: "Landing Page Business",
   },
   {
@@ -69,8 +70,8 @@ export const references: Reference[] = [
     title: "Event Organizer Sparkle",
     category: "Landing Page",
     categoryId: "landing-page",
-    description:
-      "Landing page modern untuk event organizer dengan portfolio acara dan form request quote.",
+    slug: "event-organizer-sparkle",
+    description: "Landing page modern untuk event organizer dengan portfolio acara dan form request quote. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Portfolio gallery",
       "Layanan detail",
@@ -78,7 +79,7 @@ export const references: Reference[] = [
       "Quote form",
       "Animasi scroll",
     ],
-    image: "/references/event-organizer-sparkle.png",
+    image: "/references/event-organizer-sparkle.webp",
     suggestedPackage: "Landing Page Pro",
   },
   // Company Profile
@@ -87,8 +88,8 @@ export const references: Reference[] = [
     title: "PT Konstruksi Mandiri",
     category: "Company Profile",
     categoryId: "company-profile",
-    description:
-      "Company profile profesional untuk perusahaan konstruksi dengan showcase proyek.",
+    slug: "pt-konstruksi-mandiri",
+    description: "Company profile profesional untuk perusahaan konstruksi dengan showcase proyek. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Profil perusahaan",
       "Layanan konstruksi",
@@ -96,7 +97,7 @@ export const references: Reference[] = [
       "Tim manajemen",
       "Sertifikasi",
     ],
-    image: "/references/pt-konstruksi-mandiri.png",
+    image: "/references/pt-konstruksi-mandiri.webp",
     suggestedPackage: "Company Profile Business",
     url: "https://coffee-slaw-44349086.figma.site/",
   },
@@ -105,8 +106,8 @@ export const references: Reference[] = [
     title: "Firma Hukum Adil Sejahtera",
     category: "Company Profile",
     categoryId: "company-profile",
-    description:
-      "Website firma hukum dengan desain trustworthy dan informasi layanan legal lengkap.",
+    slug: "firma-hukum-adil-sejahtera",
+    description: "Website firma hukum dengan desain trustworthy dan informasi layanan legal lengkap. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Profil pengacara",
       "Area praktik",
@@ -114,7 +115,7 @@ export const references: Reference[] = [
       "Blog artikel hukum",
       "Testimonial klien",
     ],
-    image: "/references/firma-hukum-adil-sejahtera.png",
+    image: "/references/firma-hukum-adil-sejahtera.webp",
     suggestedPackage: "Company Profile Pro",
     url: "https://sling-header-50319569.figma.site/",
   },
@@ -123,8 +124,8 @@ export const references: Reference[] = [
     title: "Klinik Gigi SmileCenter",
     category: "Company Profile",
     categoryId: "company-profile",
-    description:
-      "Website klinik gigi dengan fitur booking appointment dan informasi treatment.",
+    slug: "klinik-gigi-smilecenter",
+    description: "Website klinik gigi dengan fitur booking appointment dan informasi treatment. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Dokter gigi",
       "Layanan dental",
@@ -132,7 +133,7 @@ export const references: Reference[] = [
       "Booking form",
       "Lokasi & jam buka",
     ],
-    image: "/references/klinik-gigi-smilecenter.png",
+    image: "/references/klinik-gigi-smilecenter.webp",
     suggestedPackage: "Company Profile Business",
   },
   {
@@ -140,8 +141,8 @@ export const references: Reference[] = [
     title: "Yayasan Peduli Anak",
     category: "Company Profile",
     categoryId: "company-profile",
-    description:
-      "Website yayasan sosial dengan program donasi dan laporan kegiatan transparan.",
+    slug: "yayasan-peduli-anak",
+    description: "Website yayasan sosial dengan program donasi dan laporan kegiatan transparan. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Visi misi",
       "Program kegiatan",
@@ -149,7 +150,7 @@ export const references: Reference[] = [
       "Laporan donasi",
       "Form donatur",
     ],
-    image: "/references/yayasan-peduli-anak.png",
+    image: "/references/yayasan-peduli-anak.webp",
     suggestedPackage: "Company Profile Starter",
     url: "https://award-edge-82522623.figma.site/",
   },
@@ -159,8 +160,8 @@ export const references: Reference[] = [
     title: "Batik Nusantara Collection",
     category: "Website UMKM",
     categoryId: "umkm-bisnis",
-    description:
-      "Website UMKM batik dengan katalog produk dan cerita di balik setiap motif.",
+    slug: "batik-nusantara-collection",
+    description: "Website UMKM batik dengan katalog produk dan cerita di balik setiap motif. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Katalog batik",
       "Cerita motif",
@@ -168,7 +169,7 @@ export const references: Reference[] = [
       "Custom order",
       "WhatsApp order",
     ],
-    image: "/references/batik-nusantara-collection.png",
+    image: "/references/batik-nusantara-collection.webp",
     suggestedPackage: "Website UMKM Business",
   },
   {
@@ -176,8 +177,8 @@ export const references: Reference[] = [
     title: "Bengkel Mobil AutoCare",
     category: "Website UMKM",
     categoryId: "umkm-bisnis",
-    description:
-      "Website bengkel mobil dengan layanan servis dan booking service online.",
+    slug: "bengkel-mobil-autocare",
+    description: "Website bengkel mobil dengan layanan servis dan booking service online. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Daftar layanan",
       "Paket servis",
@@ -185,7 +186,7 @@ export const references: Reference[] = [
       "Tips otomotif",
       "Lokasi bengkel",
     ],
-    image: "/references/bengkel-mobil-autocare.png",
+    image: "/references/bengkel-mobil-autocare.webp",
     suggestedPackage: "Website UMKM Starter",
     url: "https://tack-decor-04808493.figma.site/",
   },
@@ -194,7 +195,8 @@ export const references: Reference[] = [
     title: "Studio Foto Moment",
     category: "Website UMKM",
     categoryId: "umkm-bisnis",
-    description: "Website studio foto dengan portfolio dan paket foto lengkap.",
+    slug: "studio-foto-moment",
+    description: "Website studio foto dengan portfolio dan paket foto lengkap. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Portfolio foto",
       "Paket foto",
@@ -202,7 +204,7 @@ export const references: Reference[] = [
       "Booking calendar",
       "Testimoni klien",
     ],
-    image: "/references/studio-foto-moment.png",
+    image: "/references/studio-foto-moment.webp",
     suggestedPackage: "Website UMKM Business",
     url: "https://dry-maker-55903599.figma.site/",
   },
@@ -211,8 +213,8 @@ export const references: Reference[] = [
     title: "Kopi Nusantara Roastery",
     category: "Website UMKM",
     categoryId: "umkm-bisnis",
-    description:
-      "Website coffee roastery dengan cerita origin dan katalog kopi.",
+    slug: "kopi-nusantara-roastery",
+    description: "Website coffee roastery dengan cerita origin dan katalog kopi. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Origin story",
       "Katalog kopi",
@@ -220,7 +222,7 @@ export const references: Reference[] = [
       "Wholesale info",
       "Order form",
     ],
-    image: "/references/kopi-nusantara-roastery.png",
+    image: "/references/kopi-nusantara-roastery.webp",
     suggestedPackage: "Website UMKM Pro",
     url: "https://rank-edit-89140048.figma.site/",
   },
@@ -230,8 +232,8 @@ export const references: Reference[] = [
     title: "Fashion Store Trendy",
     category: "Toko Online",
     categoryId: "toko-online",
-    description:
-      "Toko online fashion dengan katalog produk lengkap dan fitur wishlist.",
+    slug: "fashion-store-trendy",
+    description: "Toko online fashion dengan katalog produk lengkap dan fitur wishlist. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Katalog fashion",
       "Size guide",
@@ -239,7 +241,7 @@ export const references: Reference[] = [
       "Keranjang belanja",
       "Checkout WhatsApp",
     ],
-    image: "/references/fashion-store-trendy.png",
+    image: "/references/fashion-store-trendy.webp",
     suggestedPackage: "Toko Online Business",
     url: "https://direct-matrix-25412829.figma.site/",
   },
@@ -248,8 +250,8 @@ export const references: Reference[] = [
     title: "Elektronik Jaya Store",
     category: "Toko Online",
     categoryId: "toko-online",
-    description:
-      "Toko online elektronik dengan spesifikasi detail dan perbandingan produk.",
+    slug: "elektronik-jaya-store",
+    description: "Toko online elektronik dengan spesifikasi detail dan perbandingan produk. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Kategori produk",
       "Spesifikasi detail",
@@ -257,7 +259,7 @@ export const references: Reference[] = [
       "Stock status",
       "Checkout system",
     ],
-    image: "/references/elektronik-jaya-store.png",
+    image: "/references/elektronik-jaya-store.webp",
     suggestedPackage: "Toko Online Pro",
   },
   {
@@ -265,8 +267,8 @@ export const references: Reference[] = [
     title: "Herbal Alami Store",
     category: "Toko Online",
     categoryId: "toko-online",
-    description:
-      "Toko online produk herbal dengan informasi manfaat dan sertifikasi halal.",
+    slug: "herbal-alami-store",
+    description: "Toko online produk herbal dengan informasi manfaat dan sertifikasi halal. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Produk herbal",
       "Info manfaat",
@@ -274,7 +276,7 @@ export const references: Reference[] = [
       "Reseller program",
       "Order tracking",
     ],
-    image: "/references/herbal-alami-store.png",
+    image: "/references/herbal-alami-store.webp",
     suggestedPackage: "Toko Online Business",
     url: "https://beauty-storm-30590892.figma.site/",
   },
@@ -283,7 +285,8 @@ export const references: Reference[] = [
     title: "Buku Pintar Store",
     category: "Toko Online",
     categoryId: "toko-online",
-    description: "Toko buku online dengan preview dan rekomendasi personal.",
+    slug: "buku-pintar-store",
+    description: "Toko buku online dengan preview dan rekomendasi personal. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Kategori buku",
       "Book preview",
@@ -291,7 +294,7 @@ export const references: Reference[] = [
       "Rekomendasi",
       "Pre-order feature",
     ],
-    image: "/references/buku-pintar-store.png",
+    image: "/references/buku-pintar-store.webp",
     suggestedPackage: "Toko Online Starter",
   },
   // Custom System
@@ -300,8 +303,8 @@ export const references: Reference[] = [
     title: "Sistem Inventaris Gudang",
     category: "Custom System",
     categoryId: "custom-system",
-    description:
-      "Sistem manajemen inventaris dengan tracking stok real-time dan laporan.",
+    slug: "sistem-inventaris-gudang",
+    description: "Sistem manajemen inventaris dengan tracking stok real-time dan laporan. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Dashboard admin",
       "CRUD barang",
@@ -309,7 +312,7 @@ export const references: Reference[] = [
       "Laporan bulanan",
       "Export Excel",
     ],
-    image: "/references/sistem-inventaris-gudang.png",
+    image: "/references/sistem-inventaris-gudang.webp",
     suggestedPackage: "Custom System Business",
   },
   {
@@ -317,8 +320,8 @@ export const references: Reference[] = [
     title: "Aplikasi Reservasi Restoran",
     category: "Custom System",
     categoryId: "custom-system",
-    description:
-      "Sistem reservasi meja restoran dengan manajemen booking dan notifikasi.",
+    slug: "aplikasi-reservasi-restoran",
+    description: "Sistem reservasi meja restoran dengan manajemen booking dan notifikasi. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Booking calendar",
       "Table management",
@@ -326,7 +329,7 @@ export const references: Reference[] = [
       "SMS notification",
       "Dashboard report",
     ],
-    image: "/references/aplikasi-reservasi-restoran.png",
+    image: "/references/aplikasi-reservasi-restoran.webp",
     suggestedPackage: "Custom System Pro",
   },
   {
@@ -334,7 +337,8 @@ export const references: Reference[] = [
     title: "Portal Karyawan HRD",
     category: "Custom System",
     categoryId: "custom-system",
-    description: "Sistem HR dengan absensi, cuti, dan penggajian terintegrasi.",
+    slug: "portal-karyawan-hrd",
+    description: "Sistem HR dengan absensi, cuti, dan penggajian terintegrasi. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Absensi online",
       "Pengajuan cuti",
@@ -342,7 +346,7 @@ export const references: Reference[] = [
       "Data karyawan",
       "Multi-role access",
     ],
-    image: "/references/portal-karyawan-hrd.png",
+    image: "/references/portal-karyawan-hrd.webp",
     suggestedPackage: "Custom System Pro",
   },
   {
@@ -350,8 +354,8 @@ export const references: Reference[] = [
     title: "Sistem Booking Lapangan",
     category: "Custom System",
     categoryId: "custom-system",
-    description:
-      "Sistem booking lapangan futsal/badminton dengan jadwal dan pembayaran.",
+    slug: "sistem-booking-lapangan",
+    description: "Sistem booking lapangan futsal/badminton dengan jadwal dan pembayaran. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Schedule calendar",
       "Online booking",
@@ -359,7 +363,7 @@ export const references: Reference[] = [
       "Member system",
       "Report penjualan",
     ],
-    image: "/references/sistem-booking-lapangan.png",
+    image: "/references/sistem-booking-lapangan.webp",
     suggestedPackage: "Custom System Business",
   },
   {
@@ -367,8 +371,8 @@ export const references: Reference[] = [
     title: "E-Learning Platform",
     category: "Custom System",
     categoryId: "custom-system",
-    description:
-      "Platform pembelajaran online dengan video course dan progress tracking.",
+    slug: "e-learning-platform",
+    description: "Platform pembelajaran online dengan video course dan progress tracking. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Video player",
       "Quiz system",
@@ -376,7 +380,7 @@ export const references: Reference[] = [
       "Certificate generator",
       "Discussion forum",
     ],
-    image: "/references/e-learning-platform.png",
+    image: "/references/e-learning-platform.webp",
     suggestedPackage: "Custom System Pro",
   },
   {
@@ -384,8 +388,8 @@ export const references: Reference[] = [
     title: "Aplikasi Koperasi",
     category: "Custom System",
     categoryId: "custom-system",
-    description:
-      "Sistem koperasi simpan pinjam dengan manajemen anggota dan pinjaman.",
+    slug: "aplikasi-koperasi",
+    description: "Sistem koperasi simpan pinjam dengan manajemen anggota dan pinjaman. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Data anggota",
       "Simpanan",
@@ -393,7 +397,7 @@ export const references: Reference[] = [
       "Angsuran",
       "Laporan keuangan",
     ],
-    image: "/references/aplikasi-koperasi.png",
+    image: "/references/aplikasi-koperasi.webp",
     suggestedPackage: "Custom System Business",
   },
   // Additional references to reach 20+
@@ -402,8 +406,8 @@ export const references: Reference[] = [
     title: "Travel Agency Paradise",
     category: "Landing Page",
     categoryId: "landing-page",
-    description:
-      "Landing page agen travel dengan paket wisata dan booking trip.",
+    slug: "travel-agency-paradise",
+    description: "Landing page agen travel dengan paket wisata dan booking trip. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Paket wisata",
       "Gallery destinasi",
@@ -411,7 +415,7 @@ export const references: Reference[] = [
       "Booking form",
       "Testimoni traveler",
     ],
-    image: "/references/travel-agency-paradise.png",
+    image: "/references/travel-agency-paradise.webp",
     suggestedPackage: "Landing Page Pro",
     url: "https://snore-bonus-75427746.figma.site/",
   },
@@ -420,7 +424,8 @@ export const references: Reference[] = [
     title: "Gym & Fitness Center",
     category: "Company Profile",
     categoryId: "company-profile",
-    description: "Website gym dengan jadwal kelas dan membership program.",
+    slug: "gym-fitness-center",
+    description: "Website gym dengan jadwal kelas dan membership program. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Jadwal kelas",
       "Trainer profile",
@@ -428,7 +433,7 @@ export const references: Reference[] = [
       "Virtual tour",
       "Free trial form",
     ],
-    image: "/references/gym-fitness-center.png",
+    image: "/references/gym-fitness-center.webp",
     suggestedPackage: "Company Profile Business",
     url: "https://chisel-notify-76715910.figma.site/",
   },
@@ -437,8 +442,8 @@ export const references: Reference[] = [
     title: "Klinik Spesialis Jantung",
     category: "Company Profile",
     categoryId: "company-profile",
-    description:
-      "Website klinik jantung dengan informasi dokter spesialis dan booking konsultasi.",
+    slug: "klinik-spesialis-jantung",
+    description: "Website klinik jantung dengan informasi dokter spesialis dan booking konsultasi. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Dokter spesialis",
       "Layanan cathlab",
@@ -446,7 +451,7 @@ export const references: Reference[] = [
       "Edukasi jantung",
       "Emergency contact",
     ],
-    image: "/references/klinik-spesialis-jantung.png",
+    image: "/references/klinik-spesialis-jantung.webp",
     suggestedPackage: "Company Profile Pro",
   },
   {
@@ -454,8 +459,8 @@ export const references: Reference[] = [
     title: "Sekolah Internasional Bright",
     category: "Company Profile",
     categoryId: "company-profile",
-    description:
-      "Website sekolah dengan kurikulum internasional, galeri kegiatan dan pendaftaran online.",
+    slug: "sekolah-internasional-bright",
+    description: "Website sekolah dengan kurikulum internasional, galeri kegiatan dan pendaftaran online. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Kurikulum",
       "Fasilitas sekolah",
@@ -463,7 +468,7 @@ export const references: Reference[] = [
       "Pendaftaran online",
       "Testimoni orang tua",
     ],
-    image: "/references/sekolah-internasional-bright.png",
+    image: "/references/sekolah-internasional-bright.webp",
     suggestedPackage: "Company Profile Pro",
   },
   {
@@ -471,8 +476,8 @@ export const references: Reference[] = [
     title: "Perusahaan Real Estate Properti",
     category: "Company Profile",
     categoryId: "company-profile",
-    description:
-      "Company profile properti dengan listing proyek dan informasi investasi.",
+    slug: "per-businesses-real-estate-properti",
+    description: "Company profile properti dengan listing proyek dan informasi investasi. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Profil perusahaan",
       "Listing properti",
@@ -480,7 +485,7 @@ export const references: Reference[] = [
       "Investasi properti",
       "Contact agent",
     ],
-    image: "/references/per-businesses-real-estate-properti.png",
+    image: "/references/per-businesses-real-estate-properti.webp",
     suggestedPackage: "Company Profile Pro",
     url: "https://iframe-icy-33888403.figma.site/",
   },
@@ -490,8 +495,8 @@ export const references: Reference[] = [
     title: "Wisata Bahari Dive Center",
     category: "Tour & Travel",
     categoryId: "tour-travel",
-    description:
-      "Website diving tour dengan paket penyelaman dan booking trip laut.",
+    slug: "wisata-bahari-dive-center",
+    description: "Website diving tour dengan paket penyelaman dan booking trip laut. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Paket diving",
       "Galeri bawah laut",
@@ -499,7 +504,7 @@ export const references: Reference[] = [
       "Sertifikasi PADI",
       "Equipment rental",
     ],
-    image: "/references/wisata-bahari-dive-center.png",
+    image: "/references/wisata-bahari-dive-center.webp",
     suggestedPackage: "Tour & Travel Pro",
     url: "https://feast-casual-77027913.figma.site/",
   },
@@ -508,8 +513,8 @@ export const references: Reference[] = [
     title: "Paket Honeymoon Bali",
     category: "Tour & Travel",
     categoryId: "tour-travel",
-    description:
-      "Landing page paket honeymoon romantis di Bali dengan berbagai tema.",
+    slug: "paket-honeymoon-bali",
+    description: "Landing page paket honeymoon romantis di Bali dengan berbagai tema. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Paket romantis",
       "Destinasi Bali",
@@ -517,7 +522,7 @@ export const references: Reference[] = [
       "Private driver",
       "Dinner romantic",
     ],
-    image: "/references/paket-honeymoon-bali.png",
+    image: "/references/paket-honeymoon-bali.webp",
     suggestedPackage: "Tour & Travel Pro",
     url: "https://java-finch-79982868.figma.site/",
   },
@@ -526,8 +531,8 @@ export const references: Reference[] = [
     title: "Pendakian Gunung Merapi",
     category: "Tour & Travel",
     categoryId: "tour-travel",
-    description:
-      "Website tour pendakian dengan paket reguler dan private guide.",
+    slug: "pendakian-gunung-merapi",
+    description: "Website tour pendakian dengan paket reguler dan private guide. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Paket pendakian",
       "Jadwal keberangkatan",
@@ -535,7 +540,7 @@ export const references: Reference[] = [
       "Mountain guide",
       "Safety briefing",
     ],
-    image: "/references/pendakian-gunung-merapi.png",
+    image: "/references/pendakian-gunung-merapi.webp",
     suggestedPackage: "Tour & Travel Starter",
     url: "https://buzz-blues-35493430.figma.site",
   },
@@ -544,8 +549,8 @@ export const references: Reference[] = [
     title: "Wisata Halal Indonesia",
     category: "Tour & Travel",
     categoryId: "tour-travel",
-    description:
-      "Portal wisata halal dengan destinasi muslim-friendly dan paket umroh.",
+    slug: "wisata-halal-indonesia",
+    description: "Portal wisata halal dengan destinasi muslim-friendly dan paket umroh. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Destinasi halal",
       "Paket umroh",
@@ -553,7 +558,7 @@ export const references: Reference[] = [
       "Restoran halal",
       "Wisata edukasi",
     ],
-    image: "/references/wisata-halal-indonesia.png",
+    image: "/references/wisata-halal-indonesia.webp",
     suggestedPackage: "Tour & Travel Business",
   },
   {
@@ -561,8 +566,8 @@ export const references: Reference[] = [
     title: "Jakarta City Tour",
     category: "Tour & Travel",
     categoryId: "tour-travel",
-    description:
-      "Website tur kota Jakarta dengan paket sightseeing dan kuliner.",
+    slug: "jakarta-city-tour",
+    description: "Website tur kota Jakarta dengan paket sightseeing dan kuliner. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Paket sightseeing",
       "Kuliner Jakarta",
@@ -570,7 +575,7 @@ export const references: Reference[] = [
       "Tour guide",
       "Hotel booking",
     ],
-    image: "/references/jakarta-city-tour.png",
+    image: "/references/jakarta-city-tour.webp",
     suggestedPackage: "Tour & Travel Starter",
     url: "https://opal-dog-31160397.figma.site/",
   },
@@ -580,8 +585,8 @@ export const references: Reference[] = [
     title: "Kerajinan Kayu Jati",
     category: "Website UMKM",
     categoryId: "umkm-bisnis",
-    description:
-      "Website UMKM mebel kayu jati dengan katalog produk dan custom furniture.",
+    slug: "kerajinan-kayu-jati",
+    description: "Website UMKM mebel kayu jati dengan katalog produk dan custom furniture. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Katalog mebel",
       "Custom design",
@@ -589,7 +594,7 @@ export const references: Reference[] = [
       "Finishing options",
       "Pengiriman nasional",
     ],
-    image: "/references/kerajinan-kayu-jati.png",
+    image: "/references/kerajinan-kayu-jati.webp",
     suggestedPackage: "Website UMKM Business",
     url: "https://heap-zebra-06197808.figma.site/",
   },
@@ -598,8 +603,8 @@ export const references: Reference[] = [
     title: "Laundry Kiloan Express",
     category: "Website UMKM",
     categoryId: "umkm-bisnis",
-    description:
-      "Website laundry dengan layanan antar jemput dan tracking status cucian.",
+    slug: "laundry-kiloan",
+    description: "Website laundry dengan layanan antar jemput dan tracking status cucian. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Layanan laundry",
       "Harga per kg",
@@ -607,7 +612,7 @@ export const references: Reference[] = [
       "Status cucian",
       "Membership diskon",
     ],
-    image: "/references/laundry-kiloan.png",
+    image: "/references/laundry-kiloan.webp",
     suggestedPackage: "Website UMKM Starter",
   },
   {
@@ -615,8 +620,8 @@ export const references: Reference[] = [
     title: "Petshop Hewan Terpercaya",
     category: "Website UMKM",
     categoryId: "umkm-bisnis",
-    description:
-      "Website petshop dengan katalog makanan hewan dan layanan grooming.",
+    slug: "petshop-hewan",
+    description: "Website petshop dengan katalog makanan hewan dan layanan grooming. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Makanan hewan",
       "Aksesoris",
@@ -624,7 +629,7 @@ export const references: Reference[] = [
       "Pet hotel",
       "Konsultasi dokter",
     ],
-    image: "/references/petshop-hewan.png",
+    image: "/references/petshop-hewan.webp",
     suggestedPackage: "Website UMKM Business",
   },
   {
@@ -632,8 +637,8 @@ export const references: Reference[] = [
     title: "Jasa Arsitektur Interior",
     category: "Website UMKM",
     categoryId: "umkm-bisnis",
-    description:
-      "Website konsultan arsitektur dengan portfolio proyek dan konsultasi desain.",
+    slug: "jasa-arsitektur-interior",
+    description: "Website konsultan arsitektur dengan portfolio proyek dan konsultasi desain. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Portfolio proyek",
       "Layanan desain",
@@ -641,7 +646,7 @@ export const references: Reference[] = [
       "Before after",
       "Estimasi biaya",
     ],
-    image: "/references/jasa-arsitektur-interior.png",
+    image: "/references/jasa-arsitektur-interior.webp",
     suggestedPackage: "Website UMKM Pro",
     url: "https://create-rerun-84618325.figma.site/",
   },
@@ -650,8 +655,8 @@ export const references: Reference[] = [
     title: "Rental Mobil Terpercaya",
     category: "Website UMKM",
     categoryId: "umkm-bisnis",
-    description:
-      "Website rental mobil dengan pilihan armada dan booking online.",
+    slug: "rental-mobil",
+    description: "Website rental mobil dengan pilihan armada dan booking online. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Armada mobil",
       "Harga sewa",
@@ -659,7 +664,7 @@ export const references: Reference[] = [
       "Driver option",
       "Area layanan",
     ],
-    image: "/references/rental-mobil.png",
+    image: "/references/rental-mobil.webp",
     suggestedPackage: "Website UMKM Business",
   },
   // Additional Toko Online
@@ -668,8 +673,8 @@ export const references: Reference[] = [
     title: "Tas Kulit Premium",
     category: "Toko Online",
     categoryId: "toko-online",
-    description:
-      "Toko online tas kulit handmade dengan custom emboss dan material premium.",
+    slug: "tas-kulit-premium",
+    description: "Toko online tas kulit handmade dengan custom emboss dan material premium. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Katalog tas",
       "Custom emboss",
@@ -677,7 +682,7 @@ export const references: Reference[] = [
       "Garansi produk",
       "Gift wrapping",
     ],
-    image: "/references/tas-kulit-premium.png",
+    image: "/references/tas-kulit-premium.webp",
     suggestedPackage: "Toko Online Business",
   },
   {
@@ -685,8 +690,8 @@ export const references: Reference[] = [
     title: "Aksesoris Motor Custom",
     category: "Toko Online",
     categoryId: "toko-online",
-    description:
-      "Toko online aksesoris motor dengan filter produk dan spesifikasi parts.",
+    slug: "aksesoris-motor",
+    description: "Toko online aksesoris motor dengan filter produk dan spesifikasi parts. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Aksesoris motor",
       "Filter by brand",
@@ -694,7 +699,7 @@ export const references: Reference[] = [
       "Compatibilty check",
       "Install service",
     ],
-    image: "/references/aksesoris-motor.png",
+    image: "/references/aksesoris-motor.webp",
     suggestedPackage: "Toko Online Business",
     url: "https://calm-ready-72480219.figma.site/",
   },
@@ -703,8 +708,8 @@ export const references: Reference[] = [
     title: "Tanaman Hias Indoor",
     category: "Toko Online",
     categoryId: "toko-online",
-    description:
-      "Toko online tanaman hias dengan tips perawatan dan pengiriman aman.",
+    slug: "tanaman-hias-indoor",
+    description: "Toko online tanaman hias dengan tips perawatan dan pengiriman aman. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Katalog tanaman",
       "Tips perawatan",
@@ -712,7 +717,7 @@ export const references: Reference[] = [
       "Same day delivery",
       "Pot collection",
     ],
-    image: "/references/tanaman-hias-indoor.png",
+    image: "/references/tanaman-hias-indoor.webp",
     suggestedPackage: "Toko Online Starter",
   },
   {
@@ -720,8 +725,8 @@ export const references: Reference[] = [
     title: "Kue Tradisional Online",
     category: "Toko Online",
     categoryId: "toko-online",
-    description:
-      "Toko online kue tradisional dengan kategori dan festive specials.",
+    slug: "kue-tradisional-online",
+    description: "Toko online kue tradisional dengan kategori dan festive specials. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Kue tradisional",
       "Hari raya special",
@@ -729,7 +734,7 @@ export const references: Reference[] = [
       "Kue basah",
       "Gift box",
     ],
-    image: "/references/kue-tradisional-online.png",
+    image: "/references/kue-tradisional-online.webp",
     suggestedPackage: "Toko Online Starter",
   },
   {
@@ -737,8 +742,8 @@ export const references: Reference[] = [
     title: "Sepatu Sneakers Original",
     category: "Toko Online",
     categoryId: "toko-online",
-    description:
-      "Toko online sneakers original dengan verify authenticity dan size chart.",
+    slug: "sepatu-sneakers-original",
+    description: "Toko online sneakers original dengan verify authenticity dan size chart. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Sneakers original",
       "Authenticity guarantee",
@@ -746,7 +751,7 @@ export const references: Reference[] = [
       "Release calendar",
       "Wishlist",
     ],
-    image: "/references/sepatu-sneakers-original.png",
+    image: "/references/sepatu-sneakers-original.webp",
     suggestedPackage: "Toko Online Pro",
   },
   // Additional Custom System
@@ -755,8 +760,8 @@ export const references: Reference[] = [
     title: "Sistem Kasir Restoran",
     category: "Custom System",
     categoryId: "custom-system",
-    description:
-      "Sistem kasir POS restoran dengan manajemen menu dan laporan harian.",
+    slug: "sistem-kasir-restoran",
+    description: "Sistem kasir POS restoran dengan manajemen menu dan laporan harian. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Point of sale",
       "Menu management",
@@ -764,7 +769,7 @@ export const references: Reference[] = [
       "Laporan harian",
       "Multi outlet",
     ],
-    image: "/references/sistem-kasir-restoran.png",
+    image: "/references/sistem-kasir-restoran.webp",
     suggestedPackage: "Custom System Business",
   },
   {
@@ -772,8 +777,8 @@ export const references: Reference[] = [
     title: "Sistem Pendaftaran Pasien",
     category: "Custom System",
     categoryId: "custom-system",
-    description:
-      "Sistem manajemen pasien klinik dengan rekam medis elektronik.",
+    slug: "sistem-pendaftaran-pasien",
+    description: "Sistem manajemen pasien klinik dengan rekam medis elektronik. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Pendaftaran online",
       "Rekam medis",
@@ -781,7 +786,7 @@ export const references: Reference[] = [
       "Billing system",
       "Apotek integration",
     ],
-    image: "/references/sistem-pendaftaran-pasien.png",
+    image: "/references/sistem-pendaftaran-pasien.webp",
     suggestedPackage: "Custom System Pro",
   },
   {
@@ -789,7 +794,8 @@ export const references: Reference[] = [
     title: "Sistem Parkir Otomatis",
     category: "Custom System",
     categoryId: "custom-system",
-    description: "Sistem manajemen parkir dengan RFID dan laporan pendapatan.",
+    slug: "sistem-parkir-otomatis",
+    description: "Sistem manajemen parkir dengan RFID dan laporan pendapatan. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "RFID entry",
       "Auto gate",
@@ -797,7 +803,7 @@ export const references: Reference[] = [
       "Pendapatan report",
       "Member vehicle",
     ],
-    image: "/references/sistem-parkir-otomatis.png",
+    image: "/references/sistem-parkir-otomatis.webp",
     suggestedPackage: "Custom System Business",
   },
   {
@@ -805,8 +811,8 @@ export const references: Reference[] = [
     title: "Platform Freelance Marketplace",
     category: "Custom System",
     categoryId: "custom-system",
-    description:
-      "Platform marketplace freelancer dengan project bidding dan escrow payment.",
+    slug: "platform-freelance-marketplace",
+    description: "Platform marketplace freelancer dengan project bidding dan escrow payment. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "User profiles",
       "Project posting",
@@ -814,7 +820,7 @@ export const references: Reference[] = [
       "Escrow payment",
       "Rating review",
     ],
-    image: "/references/platform-freelance-marketplace.png",
+    image: "/references/platform-freelance-marketplace.webp",
     suggestedPackage: "Custom System Pro",
   },
   {
@@ -822,8 +828,8 @@ export const references: Reference[] = [
     title: "Sistem Laundry Manajemen",
     category: "Custom System",
     categoryId: "custom-system",
-    description:
-      "Sistem manajemen laundry dengan tracking cucian dan customer portal.",
+    slug: "sistem-laundry-manajemen",
+    description: "Sistem manajemen laundry dengan tracking cucian dan customer portal. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Order tracking",
       "Customer portal",
@@ -831,7 +837,7 @@ export const references: Reference[] = [
       "Inventory laundry",
       "Financial report",
     ],
-    image: "/references/sistem-laundry-manajemen.png",
+    image: "/references/sistem-laundry-manajemen.webp",
     suggestedPackage: "Custom System Business",
   },
   // Additional Landing Page
@@ -840,8 +846,8 @@ export const references: Reference[] = [
     title: "Podcast Network Indonesia",
     category: "Landing Page",
     categoryId: "landing-page",
-    description:
-      "Landing page untuk jaringan podcast dengan showcase episode dan sponsorship.",
+    slug: "podcast-network-indonesia",
+    description: "Landing page untuk jaringan podcast dengan showcase episode dan sponsorship. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Episode showcase",
       "Host profiles",
@@ -849,7 +855,7 @@ export const references: Reference[] = [
       "Listener stats",
       "Contact form",
     ],
-    image: "/references/podcast-network-indonesia.png",
+    image: "/references/podcast-network-indonesia.webp",
     suggestedPackage: "Landing Page Pro",
   },
   {
@@ -857,8 +863,8 @@ export const references: Reference[] = [
     title: "Aplikasi Fintech Investasi",
     category: "Landing Page",
     categoryId: "landing-page",
-    description:
-      "Landing page aplikasi investasi dengan fokus keamanan dan return.",
+    slug: "aplikasi-fintech-investasi",
+    description: "Landing page aplikasi investasi dengan fokus keamanan dan return. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Investment options",
       "Security features",
@@ -866,7 +872,7 @@ export const references: Reference[] = [
       "App download",
       "Testimoni investor",
     ],
-    image: "/references/aplikasi-fintech-investasi.png",
+    image: "/references/aplikasi-fintech-investasi.webp",
     suggestedPackage: "Landing Page Pro",
   },
   {
@@ -874,7 +880,8 @@ export const references: Reference[] = [
     title: "Dental Clinic Premium",
     category: "Landing Page",
     categoryId: "landing-page",
-    description: "Landing page klinik gigi premium dengan teknologi modern.",
+    slug: "dental-clinic-premium",
+    description: "Landing page klinik gigi premium dengan teknologi modern. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Advanced technology",
       "Treatment options",
@@ -882,7 +889,7 @@ export const references: Reference[] = [
       "Booking form",
       "Special offers",
     ],
-    image: "/references/dental-clinic-premium.png",
+    image: "/references/dental-clinic-premium.webp",
     suggestedPackage: "Landing Page Business",
   },
   {
@@ -890,8 +897,8 @@ export const references: Reference[] = [
     title: "Coworking Space Urban",
     category: "Landing Page",
     categoryId: "landing-page",
-    description:
-      "Landing page coworking space dengan virtual tour dan membership plan.",
+    slug: "coworking-space-urban",
+    description: "Landing page coworking space dengan virtual tour dan membership plan. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Virtual tour",
       "Membership plans",
@@ -899,7 +906,7 @@ export const references: Reference[] = [
       "Location map",
       "Book a tour",
     ],
-    image: "/references/coworking-space-urban.png",
+    image: "/references/coworking-space-urban.webp",
     suggestedPackage: "Landing Page Pro",
   },
   {
@@ -907,8 +914,8 @@ export const references: Reference[] = [
     title: "Brand Fashion Lokal",
     category: "Landing Page",
     categoryId: "landing-page",
-    description:
-      "Landing page brand fashion lokal dengan lookbook dan pre-order collection.",
+    slug: "brand-fashion-lokal",
+    description: "Landing page brand fashion lokal dengan lookbook dan pre-order collection. Jasa pembuatan website profesional ini cocok untuk meningkatkan kredibilitas bisnis Anda secara online.",
     features: [
       "Lookbook",
       "Collection preview",
@@ -916,7 +923,7 @@ export const references: Reference[] = [
       "Size guide",
       "Instagram feed",
     ],
-    image: "/references/brand-fashion-lokal.png",
+    image: "/references/brand-fashion-lokal.webp",
     suggestedPackage: "Landing Page Business",
   },
   // Additional references
@@ -1313,4 +1320,8 @@ export const getReferenceById = (id: string): Reference | undefined => {
 export const getReferencesByCategory = (categoryId: string): Reference[] => {
   if (categoryId === "all") return references;
   return references.filter((ref) => ref.categoryId === categoryId);
+};
+
+export const getReferenceBySlug = (slug: string) => {
+  return references.find((ref) => ref.slug === slug);
 };

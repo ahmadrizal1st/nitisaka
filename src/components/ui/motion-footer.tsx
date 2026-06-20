@@ -376,17 +376,17 @@ export function CinematicFooter() {
 
               {/* Social Links */}
               <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 md:gap-6">
-                <a href="https://instagram.com/nitisakastudio" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
+                <a href="https://instagram.com/nitisakastudio" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium p-2 -ml-2">
                   <Instagram className="w-4 h-4 mr-2 shrink-0" />
                   @nitisakastudio
                 </a>
                 <span className="hidden sm:inline text-muted-foreground/30">•</span>
-                <a href="https://facebook.com/nitisakastudio" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
+                <a href="https://facebook.com/nitisakastudio" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium p-2 -ml-2">
                   <Facebook className="w-4 h-4 mr-2 shrink-0" />
                   @nitisakastudio
                 </a>
                 <span className="hidden sm:inline text-muted-foreground/30">•</span>
-                <a href="https://tiktok.com/@nitisakastudio" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium">
+                <a href="https://tiktok.com/@nitisakastudio" target="_blank" rel="noopener noreferrer" className="flex items-center text-muted-foreground hover:text-foreground transition-colors text-xs md:text-sm font-medium p-2 -ml-2">
                   <svg className="w-4 h-4 mr-2 shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.23-.9 4.45-2.43 6.08-1.5 1.58-3.6 2.5-5.78 2.62-2.3.13-4.66-.46-6.42-1.92-1.78-1.48-2.88-3.7-3.03-5.99-.17-2.61.9-5.26 2.85-6.99 1.69-1.49 4.02-2.2 6.22-1.98.02 1.34.01 2.68.01 4.02-1.15-.22-2.39-.06-3.37.58-.94.61-1.54 1.63-1.65 2.74-.11 1.11.27 2.25.99 3.05.7.77 1.8 1.19 2.87 1.17 1.16-.02 2.28-.56 2.97-1.45.61-.79.93-1.8.94-2.8V.02z" /></svg>
                   @nitisakastudio
                 </a>
@@ -395,15 +395,15 @@ export function CinematicFooter() {
 
             {/* Secondary Text Links (Moved from center) */}
             <div className="flex flex-col sm:flex-row flex-wrap items-start sm:items-center gap-3 md:gap-6">
-              <a href="/" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors">
+              <a href="/" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors p-2 -ml-2">
                 Kebijakan Privasi
               </a>
               <span className="hidden sm:inline text-muted-foreground/30">•</span>
-              <a href="/" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors">
+              <a href="/" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors p-2 -ml-2">
                 Syarat & Ketentuan
               </a>
               <span className="hidden sm:inline text-muted-foreground/30">•</span>
-              <a href="/" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors">
+              <a href="/" className="text-muted-foreground font-medium text-xs md:text-sm hover:text-foreground transition-colors p-2 -ml-2">
                 Bantuan
               </a>
             </div>

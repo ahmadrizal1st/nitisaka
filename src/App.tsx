@@ -37,7 +37,7 @@ const App = () => (
                   <Routes>
                     <Route path="/" element={<Index />} />
                     <Route path="/reference" element={<ReferencePage />} />
-                    <Route path="/reference/:id" element={<ReferenceDetailPage />} />
+                    <Route path="/reference/:slug" element={<ReferenceDetailPage />} />
                     {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                     <Route path="*" element={<NotFound />} />
                   </Routes>

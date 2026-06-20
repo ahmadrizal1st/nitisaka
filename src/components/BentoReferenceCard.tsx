@@ -33,7 +33,7 @@ export const BentoReferenceCard = ({ reference, featured = false }: BentoReferen
 
   return (
     <Link 
-      to={`/reference/${reference.id}`}
+      to={`/reference/${reference.slug}`}
       className={`group relative overflow-hidden rounded-2xl block h-full w-full border border-border/50 bg-card/40 backdrop-blur-md transition-all duration-500 hover:border-primary/50 hover:shadow-2xl hover:shadow-primary/20 ${
         featured ? "md:col-span-2 md:row-span-2" : "col-span-1"
       }`}
@@ -41,7 +41,7 @@ export const BentoReferenceCard = ({ reference, featured = false }: BentoReferen
       {/* Background Image */}
       <img
         src={displayImage}
-        alt={reference.title}
+        alt={`Desain Website ${reference.title} - Jasa Pembuatan Website ${reference.category} Nitisaka`}
         onError={(e) => {
           e.currentTarget.src = currentTheme === "dark" ? "/placeholder-dark.svg" : "/placeholder-light.svg";
         }}
@@ -81,14 +81,14 @@ export const BentoReferenceCard = ({ reference, featured = false }: BentoReferen
 
           {/* Actions */}
           <div className="flex items-center gap-3 opacity-0 transform translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0 delay-75">
-            <Button size="sm" variant="secondary" className="bg-white/20 backdrop-blur-md text-white border-none hover:bg-white/30">
+            <Button size="sm" variant="secondary" className="bg-white/20 backdrop-blur-md text-white border-none hover:bg-white/30 min-h-[44px] md:min-h-0">
               <Eye className="mr-2 h-4 w-4" />
               Detail
             </Button>
             <Button
               size="sm"
               onClick={handleWhatsApp}
-              className="bg-whatsapp hover:bg-whatsapp/90 text-white shadow-lg"
+              className="bg-whatsapp hover:bg-whatsapp/90 text-white shadow-lg min-h-[44px] md:min-h-0"
             >
               <MessageCircle className="mr-2 h-4 w-4" />
               Chat
